@@ -1,0 +1,64 @@
+body{
+    color:black;
+    font-family: "Times New Roman", Times, serif;
+    font-size:xx-large;
+    padding: 10px;
+}
+
+input[type=text], select {
+    width: 25%;
+    padding: 12px 100px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 200px;
+    color: white;
+    background-color: #840202;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: x-large;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #5f0303;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+
+  input[type=radio] {
+    border: 2px;
+    width: 150%;
+    height: 2em;
+    margin-right: 10px;
+}
+
+.banner{
+    width: auto;
+    height: 200px;
+    background-color: #c10000;
+    margin: auto;
+
+}
+.center{
+    margin: auto;
+    width: 25%;
+}
+
+.checkboxgroup {
+    display: inline-block;
+    text-align: center;
+
+  }
+  
+  .checkboxgroup label {
+    display: block;
+    margin-left: 20px;
+    font-size: larger;
+  }
