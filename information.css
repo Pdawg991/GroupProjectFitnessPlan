@@ -8,7 +8,25 @@ body {
   h2 {
     font-weight: 300;
     text-align: center;
+    color:#840202;
   }
+
+table,th,td{
+  border: 2px solid black;
+  border-collapse: collapse;
+  color: black;
+  
+}table{
+  width: 635px;
+}
+
+th{
+  text-align: left;
+  color: #840202;
+}
+td{
+  text-align: left;
+}
 
   hr{
     border-top: 1px solid black;
@@ -38,6 +56,12 @@ body {
   }
   
   p {
+    position: relative;
+    text-align: left;
+    color:black;
+  }
+  h1{
+    font-size: medium;
     position: relative;
     text-align: left;
     color:#840202;
