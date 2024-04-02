@@ -1,0 +1,79 @@
+20230504	12:07:14	522164b8-7c32-4e79-a6f2-c7cdb4a26d76	Error: ENOENT: no such file or directory, stat 'E:\PDeLormeFinalProject\controllers\model\states.json'
+20230506	01:38:03	e2545b49-3d82-4896-b216-63fdde4d5fa0	SyntaxError: Unexpected token f in JSON at position 13
+20230506	01:39:25	38f78a65-39ce-4f8f-b0c8-486c23a01d85	SyntaxError: Unexpected token f in JSON at position 13
+20230506	01:41:18	50377ddc-853b-4b25-9d1f-2236b206060f	SyntaxError: Unexpected token f in JSON at position 13
+20230506	01:42:10	638cdf89-3ef6-4566-ad05-69c71ca91c6d	SyntaxError: Unexpected token f in JSON at position 13
+20230506	01:44:30	76cf57ed-b262-4c2d-9839-4dee33072fb0	SyntaxError: Unexpected token f in JSON at position 13
+20230506	01:48:03	8ba8eb72-6238-4278-bd9d-be825452057e	SyntaxError: Unexpected token i in JSON at position 1
+20240310	14:58:33	055578d9-d44e-4e8e-9fc7-f92cda92735b	Error: Not allowed by CORS
+20240310	14:58:43	1be0fd95-2179-444c-a400-6f58af913d8c	Error: Not allowed by CORS
+20240310	14:58:48	d6f55fac-d38d-4c42-8585-88a003e7d970	Error: Not allowed by CORS
+20240310	14:58:53	d9310ccf-dd41-453b-b4eb-2f3e35f8dbf6	Error: Not allowed by CORS
+20240310	14:58:57	587ab641-10d4-4f59-9308-98de92e00f4f	Error: Not allowed by CORS
+20240310	15:11:18	3effb4c6-1ccf-417f-b1d1-69b14c794843	Error: Not allowed by CORS
+20240310	15:11:19	9020ff8c-b7a7-4dbe-939b-ffe40b1ff745	Error: Not allowed by CORS
+20240310	15:11:20	01002f70-08f4-4a96-a2e1-84e75eb018bb	Error: Not allowed by CORS
+20240310	15:11:20	f90f0064-ca44-40ca-8c94-50f5c40ecc86	Error: Not allowed by CORS
+20240310	15:11:21	c7d85d13-8534-4ac8-9e44-6c32de780d36	Error: Not allowed by CORS
+20240310	15:11:21	434b4fb1-c9a1-4b5f-8417-480a9e57320d	Error: Not allowed by CORS
+20240310	15:11:29	f8d5f2b8-0b19-4e65-9115-c8b1d3ff3aff	Error: Not allowed by CORS
+20240310	15:11:29	e7d93a47-f404-4073-9531-2cc3c1b29848	Error: Not allowed by CORS
+20240310	15:11:30	a6a88b2e-f56d-49aa-aad4-b35ebcf68d3a	Error: Not allowed by CORS
+20240310	15:11:31	7a5503d3-3510-4cd3-9a0d-a342fbb7a194	Error: Not allowed by CORS
+20240310	15:11:41	d362b99a-ac6a-4c04-84b4-94bd8307b6e9	Error: Not allowed by CORS
+20240310	15:13:06	b5cecdc0-1391-4202-b83c-aac2571148dd	Error: Not allowed by CORS
+20240310	15:13:09	76ac0f31-4de1-48dd-b869-2e460af6268c	Error: Not allowed by CORS
+20240310	15:32:30	92ea9478-c14e-49fd-b8c5-476fc76c38f9	Error: Not allowed by CORS
+20240310	15:32:31	6dc5ed31-4c9c-4e63-aae3-4c4c6f992f01	Error: Not allowed by CORS
+20240310	21:24:29	fb5e38b8-c061-487e-ac26-c175afa5943d	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\FinalProjectSE\views\index.html'
+20240311	14:39:55	02c56a67-bb09-467c-a91c-e04a8deb2780	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\FinalProjectSE\views\index.html'
+20240311	14:40:08	76ec79ea-e6f0-4115-a9c2-8217d4778e98	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\FinalProjectSE\views\index.html'
+20240311	14:40:12	168b41b4-1bc9-4c42-84dc-d7be6dd4330a	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\FinalProjectSE\views\index.html'
+20240311	14:41:14	b63b2d2e-6ea8-4505-9dce-b7af55a83a9d	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\FinalProjectSE\views\index.html'
+20240311	14:48:33	4908bfe9-42ce-4db6-992e-362d2d6b840a	Error: Not allowed by CORS
+20240311	14:55:30	c550f4c6-84fb-4fc7-81b5-5cfb61cabff3	Error: Not allowed by CORS
+20240311	14:56:29	84eb87e8-1398-4135-88bd-e5b7ed4e61ee	Error: Not allowed by CORS
+20240311	15:05:49	470fb267-9c67-413d-b7e6-4b10eaa519e2	Error: Not allowed by CORS
+20240311	15:05:51	b8884c4e-10c4-4fae-9c1a-82654db88c7c	Error: Not allowed by CORS
+20240311	15:05:52	898d2041-8327-47d4-933d-4459f941a615	Error: Not allowed by CORS
+20240311	15:05:54	5f0b7d32-a346-469b-8bab-fb096dfabaa8	Error: Not allowed by CORS
+20240311	15:06:18	f00caa21-d858-4e89-b9f6-8f6e6a24e0bc	Error: Not allowed by CORS
+20240311	15:06:19	e7ea55a7-10f4-4f27-8baa-5b4c771990ea	Error: Not allowed by CORS
+20240311	15:32:36	c2f9f58a-2ca1-4852-bf31-477cd47647d5	TypeError: allowedOrigins.indexOf is not a function
+20240311	15:32:44	7326e613-2d39-4db9-a4bc-0a94fcf98b2f	TypeError: allowedOrigins.indexOf is not a function
+20240311	15:32:49	dda287f2-b9fa-4788-8b47-660abd1e3193	TypeError: allowedOrigins.indexOf is not a function
+20240311	15:57:11	870e2e34-9a20-451e-9d08-ce528d22a6c6	TypeError: allowedOrigins.indexOf is not a function
+20240311	15:57:14	9e1f69ce-bf42-4da8-b5f5-45bd42a1ba85	TypeError: allowedOrigins.indexOf is not a function
+20240311	15:57:16	1daadaba-16cd-40d3-9876-a0b198b2c156	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:02:42	42674878-9ac4-4c2b-86c2-fd1a4b6e1f3a	Error: Not allowed by CORS
+20240311	16:15:03	418e9188-5d9c-4065-a481-553176674f4b	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:15:07	11eff9ec-2f52-4437-935f-653e29c2c7b4	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:15:08	ed36645e-46fa-4dab-b8f4-bc0c36e95042	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:15:13	c420103a-39bc-4b63-9181-c7f83bd57592	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:15:24	87d63227-4b93-44fe-a141-a081df5a0103	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:15:24	fc32d68f-fb1d-4250-9e23-3ae9007ca785	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:15:25	5ec37c02-92e7-48e6-a4bd-9081e748e266	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:15:40	ec4999f5-4c61-48bb-a3c4-1eaf5e89c932	TypeError: allowedOrigins.indexOf is not a function
+20240311	16:16:24	ffd25958-da55-496a-8369-cd25cffcdd8d	TypeError: allowedOrigins.indexOf is not a function
+20240312	12:11:41	bdf795b3-43d3-45d0-8419-045a6e8d2b2e	Error: Can't set headers after they are sent.
+20240312	12:14:00	aa257a99-3b2f-4f83-bc09-253c52ec4d9d	Error: Can't set headers after they are sent.
+20240312	12:15:10	f642fe98-e9c0-47a7-8080-3fbaaa9cd431	Error: Can't set headers after they are sent.
+20240312	12:15:14	854b9b88-5266-4b9c-8f89-726454236073	Error: Can't set headers after they are sent.
+20240312	12:15:20	c921fe45-d521-4ac1-aeac-0f9455e8745a	Error: Can't set headers after they are sent.
+20240312	12:15:53	1aa24800-6f12-4a82-b2b5-672fad9a3879	Error: Can't set headers after they are sent.
+20240312	12:16:07	b389a02d-e3a5-4573-9c81-38804a5a9135	Error: Can't set headers after they are sent.
+20240312	12:16:32	69b3b716-c7e1-40b8-ad32-764333109f53	Error: Can't set headers after they are sent.
+20240312	12:16:39	86fb6fd2-008f-444a-8a45-8285fc3df06b	Error: Can't set headers after they are sent.
+20240312	12:16:40	564eb770-3c29-4084-b447-503689bb5ae3	Error: Can't set headers after they are sent.
+20240312	12:17:04	f2b43650-f45a-4edd-9227-829a619a92b3	Error: Can't set headers after they are sent.
+20240312	12:17:06	ac5be8d4-1e6d-40ed-8e34-df4f35321df4	Error: Can't set headers after they are sent.
+20240312	12:17:33	b87410a5-c293-437d-a1ef-81fdf824a934	Error: Can't set headers after they are sent.
+20240312	12:17:33	c764607b-3e4e-431b-8038-f5d2389cab17	Error: Can't set headers after they are sent.
+20240312	12:17:33	249b81c5-7c86-49a5-b2da-f9bcbd6a2f1a	Error: Can't set headers after they are sent.
+20240312	12:17:33	bdc58ae9-c0d7-4b4e-ab8e-3d3cdaf10650	Error: Can't set headers after they are sent.
+20240312	12:17:34	79b807b0-71ee-4967-ac9e-67fcbd2f3333	Error: Can't set headers after they are sent.
+20240312	12:17:34	b0949050-720f-47dc-b2ee-0002f67ffacc	Error: Can't set headers after they are sent.
+20240312	12:17:34	a496f6c1-d1a7-470f-911c-f17c2b5d1965	Error: Can't set headers after they are sent.
+20240312	12:17:34	966df312-4578-4d44-911c-32381674d9b5	Error: Can't set headers after they are sent.
+20240312	12:17:34	52b52a9f-e6b4-42dc-93b4-52d013c1656c	Error: Can't set headers after they are sent.
+20240312	12:17:51	85940fcd-6d11-4f40-8a14-34411991fbbc	Error: Can't set headers after they are sent.
