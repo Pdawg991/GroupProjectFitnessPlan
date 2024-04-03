@@ -3,29 +3,29 @@ const Schema = mongoose.Schema;
 
 
 const bioSchema = new Schema({
-    name: {
+    fitness_goal: {
         type: String,
         required: true
     },
-    age: {
+    current_weight: {
         type: Number,
         required: true
     },
-    current_Weight: {
+    goal_weight: {
         type: Number,
         required: true
     },
-    goal: {
+    current_max: {
+        type: Number,
+        required: true
+    }, 
+    goal_max: {
         type: Number,
         required: true
     },
-    goal_Weight: {
+    fitness_level: {
         type: Number,
         required: true
     },
-    goal_Max: {
-        type: Number,
-        required: true
-    }
 });
 module.exports = mongoose.model('Bio', bioSchema);

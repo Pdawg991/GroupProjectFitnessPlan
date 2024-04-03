@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-  <link rel="stylesheet" href="fitTest.css">
+  <link rel="stylesheet" type = "text/css" href="fitTest.css">
   <title>
     Fitness Test
   </title>
@@ -19,25 +19,21 @@
         <option value="buildMuscle">Build Muscle</option>
         <option value="buildStrength">Build Strength</option>
       </select><br><br>
-      </form>
+      
       What is your current weight in lbs?
-      <form id = "curWeightEntry">
+      
       <input type="text" id="curWeight" name="curWeight" placeholder="Your weight. . . "><br><br>
-      </form>
+      
       What is your goal weight in lbs?  
-      <form id = goalWeightEntry>
+   
       <input type="text" id="goalWeight" name="goalWeight" placeholder="Your goal weight. . ."><br><br>
-      </form>
+      
       What is you current max?
-      <form id = "curMaxEntry">
       <input type="text" id="curMax" name="curMax" placeholder="Your goal weight. . ."><br><br>
-      </form>
+
       What is your goal max?
-      <form id = "goalMaxEntry">
-      <input type="text" id="goalMax" name="goalMaxt" placeholder="Your goal max. . ."><br><br>
-      </form>
+      <input type="text" id="goalMax" name="goalMax" placeholder="Your goal max. . ."><br><br>
       What is your current fitness level (1 being beginner and 5 being master)?
-      <form id = "fitnessLevelCheckboxes">
       <div id="checkboxes">
         <div class="checkboxgroup">
           <label for="level1">1</label>
@@ -60,11 +56,9 @@
           <input type="radio" name="radio" id="level5" />
         </div>
       </div>
-      </form>
       <br>
-        <form id = "submitTest">
-        <p><input type="submit"name="submit" value="Submit"></p>  
-        </form>
+        <p><input type="submit"name="submit" value="Submit"></p> 
+      </form>
         <br>
     </div>
   </div>
@@ -72,32 +66,4 @@
 <footer>
     
 </footer>
-<script>
-  const form = document.getElementById('fitTest');
-  
-  form.addEventListener('submit', function(event) {
-  
-  event.preventDefault(); // Prevent default form submission
-  const payload = new FormData(form);
-
-  console.log(...payload);
-  const data = {
-          fitness_goal: payload.get('fitGoal'),
-          current_weight: payload.get('curWeight'),
-          goal_weight: payload.get('goalWeight'),
-          current_max: payload.get('curMax'),
-          goal_max: payload.get('goalMax'),
-          fitness_level: payload.get('checkboxgroup')
-          }
-          fetch('/bio', {
-              method: "POST",
-              headers: {
-              'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(data),
-          })
-          .then(res => res.json())
-          .then(data=> console.log(data))
-          .catch(err => console.log(err));
-      });
-</script>
+<script src="../scripts/postFitGoal.js"></script>

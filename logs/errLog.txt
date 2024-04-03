@@ -77,3 +77,16 @@
 20240312	12:17:34	966df312-4578-4d44-911c-32381674d9b5	Error: Can't set headers after they are sent.
 20240312	12:17:34	52b52a9f-e6b4-42dc-93b4-52d013c1656c	Error: Can't set headers after they are sent.
 20240312	12:17:51	85940fcd-6d11-4f40-8a14-34411991fbbc	Error: Can't set headers after they are sent.
+20240403	11:48:20	a64776ab-a28a-49ea-9377-3b7a47d6f1cc	Error: Not allowed by CORS
+20240403	11:50:23	1f5f42e4-1ac2-4b78-9e2a-50fdfbf3c254	Error: Not allowed by CORS
+20240403	11:53:56	e1ba050f-3c08-4c4d-adc2-4dee05b6f532	Error: Not allowed by CORS
+20240403	11:55:06	86122cf4-6056-43f7-919a-28c07d76478b	Error: Not allowed by CORS
+20240403	11:56:38	2994748e-d0ee-4e28-875f-2fd4591f0508	Error: Not allowed by CORS
+20240403	12:00:50	b39cac3b-7009-4504-a045-f1341388c4c0	Error: Not allowed by CORS
+20240403	12:04:06	e0a8c99a-e69f-492c-8dfc-85e8cb98bcd0	Error: Not allowed by CORS
+20240403	12:14:31	513673f8-eb74-4330-b34c-5ec0a8c298e3	Error: Not allowed by CORS
+20240403	12:14:36	7e0be1ad-5395-4c7b-a419-e75bc078744e	Error: Not allowed by CORS
+20240403	12:15:28	68552c4d-e8a5-4118-a394-7c8345c5ec60	Error: Not allowed by CORS
+20240403	12:16:30	a8c8c77c-98e3-4203-b011-fcdb7ad87229	Error: Not allowed by CORS
+20240403	12:18:27	fb0cc282-36db-4c79-9028-205261431b55	Error: Not allowed by CORS
+20240403	12:18:37	ac07d345-f4f2-4d2c-8d60-609d6171667c	Error: Not allowed by CORS
