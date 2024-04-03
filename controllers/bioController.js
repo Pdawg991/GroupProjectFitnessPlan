@@ -8,19 +8,19 @@ const getBio = async (req, res) => {
 const createNewBio = async (req, res) => {
     const bio = await Bio.find();
     if(!bio) return res.status(204).json({'message' : 'No Bios found'});
-    console.log(req.body);
-    /*
+    const { fitness_goal, current_weight, 
+        goal_weight, current_max, 
+        goal_max, fitness_level } = req.body;
+    // Create a new document in the database
     const result = await Bio.create({
-    name: "Keith",
-    age: 35,
-    current_Weight: 180,
-    goal: 175,
-    goal_Weight: 175,
-    goal_Max: 200
-
-});
-    res.status(201).json(bio);*/
-    res.status(201);
+        fitness_goal, 
+        current_weight, 
+        goal_weight, 
+        current_max, 
+        goal_max, 
+        fitness_level
+    });
+    res.status(201).json(result);
 }
 module.exports = {
     getBio,

@@ -8,7 +8,7 @@ const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
-const PORT = process.env.PORT || 3000;
+const PORT = 5500 || process.env.PORT || 3000;
 
 // Connect to MongoDB
 connectDB();
@@ -24,8 +24,9 @@ app.use(express.urlencoded({ extended: false }));
 
 // built-in middleware for json 
 app.use(express.json());
+//Serve static files from public
+app.use(express.static(path.join(__dirname, 'public')));
 // routes
-app.use(express.static(path.join(__dirname, 'views')));
 app.use('/', require('./routes/root'));
 app.use('/bio', require('./routes/api/bios'));
 
