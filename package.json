@@ -9,6 +9,9 @@
   },
   "author": "Phillip DeLorme",
   "license": "ISC",
+  "engines": { 
+    "node": "16.x" 
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.5",
