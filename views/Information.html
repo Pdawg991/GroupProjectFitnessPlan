@@ -122,10 +122,66 @@
               </td>
             </tr>
           </table>
+          <!--buttons to update info and delete account-->
+            <div class="row">
+              <div class="column button_col">
+                <form id = "updateInfo">
+                  <a href="./views/information.html">
+                    <input type="button" id="update" value="Update Goal">
+                  </a>
+                </form>
+              </div>
+              <div class="column button_col"> <!--Create a popup that lets you update name and age or delete account-->
+                <form id = "changeAccount">
+                  <a href="#popup-box-1">
+                    <input type="button" id="change" value="Update Account">
+                  </a>
+                </form>
+              </div>
+            </div>
         </div>
       </div>
     </div>
   </div>
+  <div id="popup-box-1" class="modal">
+    <div class="content">
+      <h2>
+        Update Account Inforation
+      </h2>
+      <p>
+        <form id = "clientName">
+          <input type="text" id="clientName" name="clientName" placeholder="Name" required><i class="validation"><span></span><span></span></i>
+        </form>
+        <br>
+        <form id = "clientAge">
+          <input type="text" id="clientAge" name="clientAge" placeholder="Age" required><i class="validation"><span></span><span></span></i>
+        </form>
+      </p>
+      <div class="row">
+        <div class="column popup_col">
+          <form id = "updateAcc">
+            <input type="button" id="updateAcc" value="Update Account">
+          </form>
+        </div>
+        <div class="column popup_col">
+          <form id = "deleteAccount"> <!--Have this open another popup to confirm-->
+            <input type="button" id="delete" value="Delete Account">
+          </form>
+        </div>
+      </div>
+        <a
+            href="#"
+            style="
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: #fe0606;
+                font-size: 30px;
+                text-decoration: none;
+            "
+            >&times;</a
+        >
+    </div>
 </body>
 <footer>
     
