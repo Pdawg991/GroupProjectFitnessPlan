@@ -1,189 +1,72 @@
 <!DOCTYPE html>
-<html lang = "en">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-  </style>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Information</title>
   <link rel="stylesheet" href="information.css">
-  <title>
-    Personal Information
-  </title>
-  <meta charset = "utf-8">
-  <script src="info.js"></script>
+  <script src="information.js"></script>
 </head>
 <body>
-  <div id = "personal-info-wrap">
-    <div id = "personal-info">
+  <div id="personal-info-wrap">
+    <div id="personal-info">
       <div class="row">
         <div class="column left border-right" style="background-color:#aaa;">
-          <h2>Personal Info</h2> <!--Adjust this columns so they are the same size-->
+          <h2>Personal Info</h2>
           <hr>
           <h1>
-             Name: <p> John Doe </p><!--replace placeholder and write name var here using js-->
-             Age: <p> 35 </p><!--replace placeholder and write age var here using js-->
-             Current weight: <p> 250 lbs </p><!--replace placeholder and write current weight var here using js-->
-             Goal weight: <p> 200 lbs </p><!--replace placeholder and write goal weight var here using js-->
-             Current max: <p> 50 lbs </p><!--replace placeholder and write current max var here using js-->
-             Goal max: <p> 100 lbs </p><!--replace placeholder and write goal max var here using js-->
-             Fitness goal: <p> Lose Fat </p><!--replace placeholder and write fit goal var here using js-->
+            Name: <p id="clientName">John Doe</p>
+            Age: <p id="clientAge">35</p>
+            Current weight: <p id="curWeight">250 lbs</p>
+            Goal weight: <p id="goalWeight">200 lbs</p>
+            Current max: <p id="curMax">50 lbs</p>
+            Goal max: <p id="goalMax">100 lbs</p>
+            Fitness goal: <p id="fitGoal">Lose Fat</p>
           </h1>
         </div>
         <div class="column right" style="background-color:#bbb;">
-          <h2>Fitness and Diet Plans</h2> <!--Replace placeholders with values from database using js-->
+          <h2>Fitness and Diet Plans</h2>
           <hr>
-          <table>
-            <tr>
-              <th>
-                Day
-              </th>
-              <th>
-                Workout
-              </th>
-              <th>
-                Diet
-              </th>
-            </tr>
-            <tr>
-              <td>
-                Monday
-              </td>
-              <td>
-                do this today
-              </td>
-              <td>
-                Eat this today
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Tuesday
-              </td>
-              <td>
-                do this today
-              </td>
-              <td>
-                Eat this today
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Wednesday
-              </td>
-              <td>
-                do this today
-              </td>
-              <td>
-                Eat this today
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Thursday
-              </td>
-              <td>
-                do this today
-              </td>
-              <td>
-                Eat this today
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Friday
-              </td>
-              <td>
-                do this today
-              </td>
-              <td>
-                Eat this today
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Saturday
-              </td>
-              <td>
-                do this today
-              </td>
-              <td>
-                Eat this today
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Sunday
-              </td>
-              <td>
-                do this today
-              </td>
-              <td>
-                Eat this today
-              </td>
-            </tr>
+          <table id="fitnessDietTable">
           </table>
-          <!--buttons to update info and delete account-->
-            <div class="row">
-              <div class="column button_col">
-                <form id = "updateInfo">
-                  <a href="./views/information.html">
-                    <input type="button" id="update" value="Update Goal">
-                  </a>
-                </form>
-              </div>
-              <div class="column button_col"> <!--Create a popup that lets you update name and age or delete account-->
-                <form id = "changeAccount">
-                  <a href="#popup-box-1">
-                    <input type="button" id="change" value="Update Account">
-                  </a>
-                </form>
-              </div>
+          <div class="row">
+            <div class="column button_col">
+              <form id="updateInfo">
+                <input type="button" id="update" value="Update Goal">
+              </form>
             </div>
+            <div class="column button_col">
+              <form id="changeAccount">
+                <input type="button" id="change" value="Update Account">
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div id="popup-box-1" class="modal">
     <div class="content">
-      <h2>
-        Update Account Inforation
-      </h2>
+      <h2>Update Account Information</h2>
       <p>
-        <form id = "clientName">
-          <input type="text" id="clientName" name="clientName" placeholder="Name" required><i class="validation"><span></span><span></span></i>
-        </form>
-        <br>
-        <form id = "clientAge">
-          <input type="text" id="clientAge" name="clientAge" placeholder="Age" required><i class="validation"><span></span><span></span></i>
+        <form id="updateAccountForm">
+          <input type="text" id="updateClientName" name="updateClientName" placeholder="Name" required><br>
+          <input type="text" id="updateClientAge" name="updateClientAge" placeholder="Age" required><br>
+          <input type="button" id="updateAcc" value="Update Account">
         </form>
       </p>
       <div class="row">
         <div class="column popup_col">
-          <form id = "updateAcc">
-            <input type="button" id="updateAcc" value="Update Account">
-          </form>
-        </div>
-        <div class="column popup_col">
-          <form id = "deleteAccount"> <!--Have this open another popup to confirm-->
+          <form id="deleteAccountForm">
             <input type="button" id="delete" value="Delete Account">
           </form>
         </div>
       </div>
-        <a
-            href="#"
-            style="
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                color: #fe0606;
-                font-size: 30px;
-                text-decoration: none;
-            "
-            >&times;</a
-        >
+      <a href="#" style="position: absolute; top: 10px; right: 10px; color: #fe0606; font-size: 30px; text-decoration: none;">&times;</a>
     </div>
+  </div>
 </body>
 <footer>
     
 </footer>
+</html>
