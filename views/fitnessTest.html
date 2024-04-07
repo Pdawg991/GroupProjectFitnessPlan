@@ -1,74 +1,66 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-  <link rel="stylesheet" type = "text/css" href="fitTest.css">
-  <title>
-    Fitness Test
-  </title>
-  <meta charset = "utf-8">
-  <script src="fitTest.js"></script>
+  <link rel="stylesheet" type="text/css" href="fitTest.css">
+  <title>Fitness Test</title>
+  <meta charset="utf-8">
 </head>
 <body>
-  <div id = "fitness-test-wrap">
-    <div id = "fitness-test">
+  <div id="fitness-test-wrap">
+    <div id="fitness-test">
       <br>
-      What is your fitness goal?
-      <form id = "fitnessGoalSelect">
-      <label for="fitness"></label>
-      <select id="fitGoal" name="fitGoal">
-        <option value="loseFat">Lose Fat</option>
-        <option value="buildMuscle">Build Muscle</option>
-        <option value="buildStrength">Build Strength</option>
-      </select><br><br>
-      
-      What is your current weight in lbs?
-      
-      <input type="text" id="curWeight" name="curWeight" placeholder="Your weight. . . "><br><br>
-      
-      What is your goal weight in lbs?  
-   
-      <input type="text" id="goalWeight" name="goalWeight" placeholder="Your goal weight. . ."><br><br>
-      
-      What is you current max?
-      <input type="text" id="curMax" name="curMax" placeholder="Your goal weight. . ."><br><br>
-
-      What is your goal max?
-      <input type="text" id="goalMax" name="goalMax" placeholder="Your goal max. . ."><br><br>
-      What is your current fitness level (1 being beginner and 5 being master)?
-      <div id="checkboxes">
-        <div class="checkboxgroup">
-          <label for="level1">1</label>
-          <input type="radio" name="radio" id="level1" />
+      <form id="fitnessTestForm">
+        <label for="fitGoal">What is your fitness goal?</label><br>
+        <select id="fitGoal" name="fitGoal">
+          <option value="loseFat">Lose Fat</option>
+          <option value="buildMuscle">Build Muscle</option>
+          <option value="buildStrength">Build Strength</option>
+        </select><br><br>
+        
+        <label for="curWeight">What is your current weight in lbs?</label><br>
+        <input type="text" id="curWeight" name="curWeight" placeholder="Your weight..."><br><br>
+        
+        <label for="goalWeight">What is your goal weight in lbs?</label><br>
+        <input type="text" id="goalWeight" name="goalWeight" placeholder="Your goal weight..."><br><br>
+        
+        <label for="curMax">What is your current max?</label><br>
+        <input type="text" id="curMax" name="curMax" placeholder="Your current max..."><br><br>
+        
+        <label for="goalMax">What is your goal max?</label><br>
+        <input type="text" id="goalMax" name="goalMax" placeholder="Your goal max..."><br><br>
+        
+        <label for="fitnessLevel">What is your current fitness level (1 being beginner and 5 being master)?</label><br>
+        <div id="checkboxes">
+          <div class="checkboxgroup">
+            <label for="level1">1</label>
+            <input type="radio" name="fitnessLevel" id="level1" value="1">
+          </div>
+          <div class="checkboxgroup">
+            <label for="level2">2</label>
+            <input type="radio" name="fitnessLevel" id="level2" value="2">
+          </div>
+          <div class="checkboxgroup">
+            <label for="level3">3</label>
+            <input type="radio" name="fitnessLevel" id="level3" value="3">
+          </div>
+          <div class="checkboxgroup">
+            <label for="level4">4</label>
+            <input type="radio" name="fitnessLevel" id="level4" value="4">
+          </div>
+          <div class="checkboxgroup">
+            <label for="level5">5</label>
+            <input type="radio" name="fitnessLevel" id="level5" value="5">
+          </div>
         </div>
-        <div class="checkboxgroup">
-          <label for="level2">2</label>
-          <input type="radio" name="radio" id="level2" />
-        </div>
-        <div class="checkboxgroup">
-          <label for="level3">3</label>
-          <input type="radio" name="radio" id="level3" />
-        </div>
-        <div class="checkboxgroup">
-          <label for="level4">4</label>
-          <input type="radio" name="radio" id="level4" />
-        </div>
-        <div class="checkboxgroup">
-          <label for="level5">5</label>
-          <input type="radio" name="radio" id="level5" />
-        </div>
-      </div>
-      <br>
-        <p>
-          <a href="./views/information.html">
-            <input type="submit"name="submit" value="Submit">
-          </a>
-        </p>  
-      </form>
         <br>
+        <input type="submit" name="submit" value="Submit">
+      </form>
+      <br>
     </div>
   </div>
+  <script src="fitTest.js"></script>
 </body>
 <footer>
     
 </footer>
-<script src="../scripts/postFitGoal.js"></script>
+</html>
