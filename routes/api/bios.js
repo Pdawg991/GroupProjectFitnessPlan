@@ -8,6 +8,8 @@ router.route('/')
     .post(bioController.createNewBio);
 
 router.route('/find')
-    .get(bioController.getBio)
+    .get(bioController.getBio);
 
+router.route('/createPi')
+    .post(bioController.createNewPi);
 module.exports = router;
