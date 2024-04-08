@@ -48,8 +48,6 @@ router.get('^/$|/register(.css)?', (req, res) => {
 });
 
 router.get('^/$|/info(.js)?', (req, res) => {
-    //res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));
-
     if (req.headers.referer && req.headers.referer.includes('information.html')) {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'info.js'));
     } else {
@@ -59,8 +57,6 @@ router.get('^/$|/info(.js)?', (req, res) => {
 });
 
 router.get('^/$|/healthAnalytics(.js)?', (req, res) => {
-    //res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));
-
     if (req.headers.referer && req.headers.referer.includes('information.html')) {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'healthAnalytics.js'));
     } else {
@@ -69,13 +65,27 @@ router.get('^/$|/healthAnalytics(.js)?', (req, res) => {
     }
 });
 router.get('^/$|/updateAccount(.js)?', (req, res) => {
-    //res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));
-
     if (req.headers.referer && req.headers.referer.includes('information.html')) {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'updateAccount.js'));
     } else {
         // If requested directly or from an unauthorized source, return 403 Forbidden
         res.status(403).send('Forbidden');
     }
+});
+router.get('^/$|/populateInfo(.js)?', (req, res) => {
+     if (req.headers.referer && req.headers.referer.includes('information.html')) {
+        res.sendFile(path.join(__dirname, '..', 'scripts', 'populateInfo.js'));
+    } else {
+        // If requested directly or from an unauthorized source, return 403 Forbidden
+        res.status(403).send('Forbidden');
+    }
+});
+router.get('^/$|/deleteAccount(.js)?', (req, res) => {
+    if (req.headers.referer && req.headers.referer.includes('information.html')) {
+       res.sendFile(path.join(__dirname, '..', 'scripts', 'deleteAccount.js'));
+   } else {
+       // If requested directly or from an unauthorized source, return 403 Forbidden
+       res.status(403).send('Forbidden');
+   }
 });
 module.exports = router;
