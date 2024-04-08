@@ -90,3 +90,12 @@
 20240403	12:16:30	a8c8c77c-98e3-4203-b011-fcdb7ad87229	Error: Not allowed by CORS
 20240403	12:18:27	fb0cc282-36db-4c79-9028-205261431b55	Error: Not allowed by CORS
 20240403	12:18:37	ac07d345-f4f2-4d2c-8d60-609d6171667c	Error: Not allowed by CORS
+20240407	23:52:48	d31d9d56-8c82-4f73-8752-6ea124626cc4	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
+20240407	23:52:48	eae2fa54-1adb-4d15-ac98-23775eeb06ae	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
+20240407	23:52:50	214056ae-c4c6-4afd-9c2b-4ab66763a6ce	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
+20240407	23:53:04	179995eb-99a0-4ba2-bd23-e1ebf80100f4	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
+20240407	23:53:10	85ea17d4-dca9-422e-a202-7abf109e568f	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
+20240407	23:54:14	b2b56ac8-1fdb-470d-ac62-b06f89166886	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
+20240407	23:54:21	50151d43-702e-43d1-8194-7a40f225e0e5	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
+20240407	23:54:25	8ec42727-d9cd-48d8-95d4-841d83d40b3f	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
+20240407	23:58:49	4d75d694-edfb-4962-a6cc-6341a326fa57	ReferenceError: next is not defined
