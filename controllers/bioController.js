@@ -11,6 +11,7 @@ const createNewBio = async (req, res) => {
     const { fitness_goal, current_weight, 
         goal_weight, current_max, 
         goal_max, fitness_level } = req.body;
+
     // Create a new document in the database
     const result = await Bio.create({
         fitness_goal, 
@@ -32,6 +33,7 @@ const getBio = async (req, res) => {
     if (!req?.body?.fitness_goal) {
         return res.status(400).json({ 'message': 'Fitness goal required.' });
     }
+    
 
     const bio = await Bio.find(
         {
