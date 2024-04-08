@@ -44,11 +44,11 @@ const createNewPi = async (req, res) => {
 const getBio = async (req, res) => {
     //Create obj to pass to Find to find by parameters
     let obj = { 
-    name: req.body.name
+    fitness_level: req.body.fitness_level
     }
     //ADD VALIDATION OF PARAMETERS
 
-    if (!req?.body?.name) {
+    if (!req?.body?.fitness_level) {
         return res.status(400).json({ 'message': 'name required.' });
     }
     

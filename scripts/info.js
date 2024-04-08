@@ -1,5 +1,5 @@
 const form = document.getElementById('changeAccount');
-const nameData = { name: "Phillip" };
+const nameData = { fitness_level: 1};
 
 fetch('/bio/find', {
     method: "POST",
