@@ -99,3 +99,6 @@
 20240407	23:54:21	50151d43-702e-43d1-8194-7a40f225e0e5	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
 20240407	23:54:25	8ec42727-d9cd-48d8-95d4-841d83d40b3f	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\login.js'
 20240407	23:58:49	4d75d694-edfb-4962-a6cc-6341a326fa57	ReferenceError: next is not defined
+20240408	01:10:50	42e6e34e-791d-4d64-86ec-fb46d7b7578a	SyntaxError: Unexpected token ''', ...""gender": 'm', 
+    "... is not valid JSON
+20240408	01:26:09	35ede682-2311-4949-bb2a-4d6c4cf4102f	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'

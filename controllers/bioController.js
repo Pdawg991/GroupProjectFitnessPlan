@@ -1,4 +1,4 @@
-const Bio = require('../model/Bio');
+const { Bio, PersonalInfo } = require('../model/Bio');
 
 const getAllBios = async (req, res) => {
     const bio = await Bio.find();
@@ -22,6 +22,24 @@ const createNewBio = async (req, res) => {
     });
     res.status(201).json(result);
 }
+const createNewPi = async (req, res) => {
+    const bio = await PersonalInfo.find();
+    if(!bio) return res.status(204).json({'message' : 'No Personal Informatino found'});
+    const { age, current_weight, current_height, gender, 
+        name, goal_weight,level } = req.body;
+    // Create a new document in the database
+    const result = await PersonalInfo.create({
+        age, 
+        current_weight, 
+        current_height, 
+        gender, 
+        name, 
+        goal_weight,
+        level
+    });
+    res.status(201).json(result);
+}
+
 const getBio = async (req, res) => {
     //Create obj to pass to Find to find by parameters
     let obj = { 
@@ -44,5 +62,6 @@ const getBio = async (req, res) => {
 module.exports = {
     getAllBios,
     createNewBio,
+    createNewPi,
     getBio
 };
