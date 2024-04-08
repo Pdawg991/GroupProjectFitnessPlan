@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
   <title>Login</title>
-  <link href="login.css" rel="stylesheet" type="text/css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
 <body>
-<div id="login-form-wrap">
-    <h2>Login</h2>
-    <div id="login-form">
-      <p>
-        <form id = "loginUsername">
-          <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
-        </form>
-      </p>
-      <p>
-        <form id = "loginPassword">
-          <input type="password" id="password" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
-        </form>
-      </p>
-      <p>
-        <form id = "loginSubmit">
-          <input type="submit" id="login" value="Login">
-        </form>
-      </p>
-    </div>
-    <div id="create-account-wrap">
-      <p>Don't have an account? <a href="register.html">Register</a></p>
-    </div>
-  </div>
+  <div class="wrapper">
+    <section class="main">
+      <h2>Login</h2>
 
+      <form id="loginUsername" class="form-style">
+        <input type="text" id="logUsername" name="logUsername" placeholder="Username" required><br><br>
+        <input type="password" id="logPassword" name="logPassword" placeholder="Password" required><br><br>
+        <input class="button" type="submit" id="login" value="Login">
+      </form>
+      
+      <div id="create-account-wrap">
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
 <script src="../scripts/login.js"></script>

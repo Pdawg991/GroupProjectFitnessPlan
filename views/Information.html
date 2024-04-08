@@ -1,72 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Personal Information</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Information</title>
-  <link rel="stylesheet" href="information.css">
-  <script src="info.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-  <div id="personal-info-wrap">
-    <div id="personal-info">
-      <div class="row">
-        <div class="column left border-right" style="background-color:#aaa;">
-          <h2>Personal Info</h2>
-          <hr>
-          <h1>
-            Name: <p id="clientName">John Doe</p>
-            Age: <p id="clientAge">35</p>
-            Current weight: <p id="curWeight">250 lbs</p>
-            Goal weight: <p id="goalWeight">200 lbs</p>
-            Current max: <p id="curMax">50 lbs</p>
-            Goal max: <p id="goalMax">100 lbs</p>
-            Fitness goal: <p id="fitGoal">Lose Fat</p>
-          </h1>
-        </div>
-        <div class="column right" style="background-color:#bbb;">
-          <h2>Fitness and Diet Plans</h2>
-          <hr>
-          <table id="fitnessDietTable">
-          </table>
-          <div class="row">
-            <div class="column button_col">
-              <form id="updateInfo">
-                <input type="button" id="update" value="Update Goal">
-              </form>
-            </div>
-            <div class="column button_col">
-              <form id="changeAccount">
-                <input type="button" id="change" value="Update Account">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="wrapper">
+    <section class="main">
+      <h2>Personal Info</h2>
+      <hr>
+      <section class="table-container">
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td id="clientName">John Doe</td>
+          </tr>
+          <tr>
+            <td>Age:</td>
+            <td id="clientAge">35</td>
+          </tr>
+          <tr>
+            <td>Current weight:</td>
+            <td id="curWeight">250 lbs</td>
+          </tr>
+          <tr>
+            <td>Goal weight:</td>
+            <td id="goalWeight">200 lbs</td>
+          </tr>
+          <tr>
+            <td>Current max:</td>
+            <td id="curMax">50 lbs</td>
+          </tr>
+          <tr>
+            <td>Goal max:</td>
+            <td id="goalMax">100 lbs</td>
+          </tr>
+          <tr>
+            <td>Fitness goal:</td>
+            <td id="fitGoal">Lose Fat</td>
+          </tr>
+        </table>
+      </section>
+
+      <h2>Fitness and Diet Plans</h2>
+      <hr>
+      <section class="table-container">
+        <table>
+          <tr>
+            <th>
+              Day
+            </th>
+            <th>
+              Workout
+            </th>
+            <th>
+              Diet
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Monday
+            </td>
+            <td>
+              do this today
+            </td>
+            <td>
+              Eat this today
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Tuesday
+            </td>
+            <td>
+              do this today
+            </td>
+            <td>
+              Eat this today
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Wednesday
+            </td>
+            <td>
+              do this today
+            </td>
+            <td>
+              Eat this today
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Thursday
+            </td>
+            <td>
+              do this today
+            </td>
+            <td>
+              Eat this today
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Friday
+            </td>
+            <td>
+              do this today
+            </td>
+            <td>
+              Eat this today
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Saturday
+            </td>
+            <td>
+              do this today
+            </td>
+            <td>
+              Eat this today
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sunday
+            </td>
+            <td>
+              do this today
+            </td>
+            <td>
+              Eat this today
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <form id="updateInfo">
+        <input class="button" type="button" id="update" value="Update Goal">
+      </form>
+      <form id="changeAccount">
+        <input class="button" type="button" id="change" value="Update Account">
+      </form>
+    </section>
   </div>
-  <div id="popup-box-1" class="modal">
-    <div class="content">
-      <h2>Update Account Information</h2>
-      <p>
-        <form id="updateAccountForm">
-          <input type="text" id="updateClientName" name="updateClientName" placeholder="Name" required><br>
-          <input type="text" id="updateClientAge" name="updateClientAge" placeholder="Age" required><br>
-          <input type="button" id="updateAcc" value="Update Account">
-        </form>
-      </p>
-      <div class="row">
-        <div class="column popup_col">
-          <form id="deleteAccountForm">
-            <input type="button" id="delete" value="Delete Account">
-          </form>
-        </div>
-      </div>
-      <a href="#" style="position: absolute; top: 10px; right: 10px; color: #fe0606; font-size: 30px; text-decoration: none;">&times;</a>
-    </div>
-  </div>
+  <script src="../scripts/info.js"></script>
 </body>
-<footer>
-    
-</footer>
 </html>
