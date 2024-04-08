@@ -7,7 +7,7 @@ const form = document.getElementById('fitnessTestForm');
 
   let selectedFitnessLevel = 0;
   //Get all elements with a name equal to radio
-  const fitnessLevelRadios = document.querySelectorAll('input[name^="radio"]');
+  const fitnessLevelRadios = document.querySelectorAll('input[name^="fitnessLevel"]');
  //Anonymous function to loop through all radio buttons. Find which is checked.
   fitnessLevelRadios.forEach(radio => {
     if (radio.checked) {
@@ -16,6 +16,7 @@ const form = document.getElementById('fitnessTestForm');
       selectedFitnessLevel = parseInt(radio.id.replace('level', ''));
     }
   });
+  console.log(selectedFitnessLevel);
   //Logs to console all values of items in payload
   //console.log(...payload);
   const data = {

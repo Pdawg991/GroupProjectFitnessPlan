@@ -102,3 +102,13 @@
 20240408	01:10:50	42e6e34e-791d-4d64-86ec-fb46d7b7578a	SyntaxError: Unexpected token ''', ...""gender": 'm', 
     "... is not valid JSON
 20240408	01:26:09	35ede682-2311-4949-bb2a-4d6c4cf4102f	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'
+20240408	01:36:49	8bd9759d-e8e8-4cde-a4f5-775162a9b514	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'
+20240408	01:37:46	2b7cb3e1-c315-44ef-b168-bec24fc39aac	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'
+20240408	01:39:00	e27da194-514b-4c0a-957a-eff62a2839f9	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'
+20240408	01:39:00	9c9f5f29-c096-4a7a-a21e-4f3f4639c5b1	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'
+20240408	01:39:15	d5b5267c-b03f-4ca9-ab5b-ae88ff8bcb7e	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'
+20240408	01:45:38	697c7951-51fd-40d0-9197-9240a53c9318	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'
+20240408	01:45:49	a96d6617-7c6b-4746-9e06-bc0452ded93e	Error: ENOENT: no such file or directory, stat 'C:\Users\Phillip's Laptop\Documents\GroupFitnessProjectGit\views\info.js'
+20240408	01:58:08	fa058b1e-e23e-420d-b237-2017caa6bc89	SyntaxError: "[object Object]" is not valid JSON
+20240408	01:59:21	d383a037-d118-4e56-bdbc-f0ba5d322dcf	SyntaxError: "[object Object]" is not valid JSON
+20240408	02:00:06	12544188-3ab4-4858-9a88-29f6677dc5d2	SyntaxError: Unexpected token '"', ""Phillip"" is not valid JSON

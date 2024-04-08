@@ -1,20 +1,22 @@
-// Retrieve stored information from MongoDB
-const Bio = require('../model/Bio.js'); // Import the Bio model
+const form = document.getElementById('changeAccount');
+const nameData = { name: "Phillip" };
 
-Bio.findOne()
-    .then(bio => {
-        if (bio) {
-            // Populate HTML elements with retrieved data
-            document.getElementById("fitGoalInfo").textContent = bio.fitness_goal;
-            document.getElementById("curWeightInfo").textContent = bio.current_weight;
-            document.getElementById("goalWeightInfo").textContent = bio.goal_weight;
-            document.getElementById("curMaxInfo").textContent = bio.current_max;
-            document.getElementById("goalMaxInfo").textContent = bio.goal_max;
-            document.getElementById("fitnessLevelInfo").textContent = bio.fitness_level;
-        } else {
-            console.log('No bio data found.');
-        }
-    })
-    .catch(error => {
-        console.error('Error retrieving bio data:', error);
-    });
+fetch('/bio/find', {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(nameData),
+})
+.then(res => res.json())
+.then(data => {
+    console.log(data);
+    document.getElementById("fitGoal").textContent = data.fitness_goal;
+    document.getElementById("curWeight").textContent = data.current_weight;
+    document.getElementById("goalWeight").textContent = data.goal_weight;
+    document.getElementById("curMax").textContent = data.current_max;
+    document.getElementById("goalMax").textContent = data.goal_max;
+    //document.getElementById("fitGoal").textContent = data.fitness_level;
+})
+.catch(err => console.log(err));
+
