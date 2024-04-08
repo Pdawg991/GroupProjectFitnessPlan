@@ -8,7 +8,8 @@
 <head>
   <link rel="stylesheet" href="information.css">
   <script src="../scripts/info.js"></script>
-  <script src = "../scripts/Health_analytics.js"></script>
+  <script src = "../scripts/healthAnalytics.js"></script>
+  <script src = "../scripts/updateAccount.js"></script>
   <title>
     Personal Information
   </title>
@@ -23,29 +24,31 @@
           <h2>Personal Info</h2> <!--Adjust this columns so they are the same size-->
           <hr>
           <h1>
-             Name: <p> 
+             Name: <p id="clientName"> 
               <script type="text">
                 document.write(displayName) 
               </script>
+              John Doe
             </p>
-             Age: <p>
+             Age: <p id="clientAge">
               <script type="text">
                 document.write(age) 
               </script> 
+              35
               </p>
-             Current weight: <p>
+             Current weight: <p id="curWeight">
               <script type="text">
                 document.write(weight) 
               </script>
                </p>
-             Goal weight: <p>
+             Goal weight: <p id="goalWeight">
               <script type="text">
                 document.write(goal_weight) 
               </script>
                </p>
-             Current max: <p> 50 lbs </p><!--replace placeholder and write current max var here using js-->
-             Goal max: <p> 100 lbs </p><!--replace placeholder and write goal max var here using js-->
-             Fitness goal: <p> Lose Fat </p><!--replace placeholder and write fit goal var here using js-->
+             Current max: <p id="curMax"> 50 lbs </p><!--replace placeholder and write current max var here using js-->
+             Goal max: <p id="goalMax"> 100 lbs </p><!--replace placeholder and write goal max var here using js-->
+             Fitness goal: <p id="fitGoal"> Lose Fat </p><!--replace placeholder and write fit goal var here using js-->
           </h1>
         </div>
         <div class="column right" style="background-color:#bbb;">
@@ -173,7 +176,7 @@
             <div class="row">
               <div class="column button_col">
                 <form id = "updateInfo">
-                  <a href="./views/information.html">
+                  <a href="../views/fitnessTest.html">
                     <input type="button" id="update" value="Update Goal">
                   </a>
                 </form>
@@ -196,17 +199,13 @@
         Update Account Inforation
       </h2>
       <p>
-        <form id = "clientName">
-          <input type="text" id="clientName" name="clientName" placeholder="Name" required><i class="validation"><span></span><span></span></i>
-        </form>
-        <br>
-        <form id = "clientAge">
-          <input type="text" id="clientAge" name="clientAge" placeholder="Age" required><i class="validation"><span></span><span></span></i>
-        </form>
+        <form id = "updateAccount">
+          <input type="text" id="clientNameInput" name="clientName" placeholder = "Name" required><i class="validation"><span></span><span></span></i>
+        <br>    
+          <input type="text" id="clientAgeInput" name="clientAge" placeholder = "Age" required><i class="validation"><span></span><span></span></i>     
       </p>
       <div class="row">
         <div class="column popup_col">
-          <form id = "updateAcc">
             <input type="button" id="updateAcc" value="Update Account">
           </form>
         </div>

@@ -57,4 +57,25 @@ router.get('^/$|/info(.js)?', (req, res) => {
         res.status(403).send('Forbidden');
     }
 });
+
+router.get('^/$|/healthAnalytics(.js)?', (req, res) => {
+    //res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));
+
+    if (req.headers.referer && req.headers.referer.includes('information.html')) {
+        res.sendFile(path.join(__dirname, '..', 'scripts', 'healthAnalytics.js'));
+    } else {
+        // If requested directly or from an unauthorized source, return 403 Forbidden
+        res.status(403).send('Forbidden');
+    }
+});
+router.get('^/$|/updateAccount(.js)?', (req, res) => {
+    //res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));
+
+    if (req.headers.referer && req.headers.referer.includes('information.html')) {
+        res.sendFile(path.join(__dirname, '..', 'scripts', 'updateAccount.js'));
+    } else {
+        // If requested directly or from an unauthorized source, return 403 Forbidden
+        res.status(403).send('Forbidden');
+    }
+});
 module.exports = router;

@@ -1,5 +1,5 @@
 const form = document.getElementById('changeAccount');
-const nameData = { fitness_level: 1};
+const nameData = { sortBy: "createdAt", sortOrder: -1};
 
 fetch('/bio/find', {
     method: "POST",
@@ -10,7 +10,6 @@ fetch('/bio/find', {
 })
 .then(res => res.json())
 .then(data => {
-    console.log(data);
     document.getElementById("fitGoal").textContent = data.fitness_goal;
     document.getElementById("curWeight").textContent = data.current_weight;
     document.getElementById("goalWeight").textContent = data.goal_weight;

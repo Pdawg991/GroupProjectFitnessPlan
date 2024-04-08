@@ -42,20 +42,24 @@ const createNewPi = async (req, res) => {
 }
 
 const getBio = async (req, res) => {
-    //Create obj to pass to Find to find by parameters
-    let obj = { 
-    fitness_level: req.body.fitness_level
-    }
-    //ADD VALIDATION OF PARAMETERS
+    try {
+        // Find the newest document based on the createdAt field
+        const bio = await Bio.findOne().sort({ createdAt: -1 });
 
-    if (!req?.body?.fitness_level) {
-        return res.status(400).json({ 'message': 'name required.' });
-    }
-    
+        // If no document is found, return a 404 status code
+        if (!bio) {
+            return res.status(404).json({ 'message': 'Bio not found.' });
+        }
 
-    const bio = await Bio.findOne(obj);
-    res.status(201).json(bio);
-}
+        // If document is found, return it
+        res.status(200).json(bio);
+    } catch (error) {
+        // If an error occurs during database query, return a 500 status code
+        console.error(error);
+        res.status(500).json({ 'message': 'Internal server error.' });
+    }
+};
+
 
 module.exports = {
     getAllBios,
