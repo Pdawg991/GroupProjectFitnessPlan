@@ -4,7 +4,10 @@ const bioController = require('../../controllers/bioController');
 const app = express();
 
 router.route('/')
-    .get(bioController.getBio)
+    .get(bioController.getAllBios)
     .post(bioController.createNewBio);
+
+router.route('/find')
+    .get(bioController.getBio)
 
 module.exports = router;

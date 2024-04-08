@@ -34,6 +34,6 @@ const form = document.getElementById('fitnessGoalSelect');
               body: JSON.stringify(data),
           })
           .then(res => res.json())
-          .then(data=> window.location.href = 'information.html')
+          .then(data => window.location.href = 'information.html')
           .catch(err => console.log(err));
       });
