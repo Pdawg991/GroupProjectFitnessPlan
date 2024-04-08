@@ -88,4 +88,7 @@ router.get('^/$|/deleteAccount(.js)?', (req, res) => {
        res.status(403).send('Forbidden');
    }
 });
+router.get('^/$|/main(.css)?', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'main.css'));
+});
 module.exports = router;
