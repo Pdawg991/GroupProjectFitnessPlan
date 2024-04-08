@@ -44,13 +44,7 @@ td{
   .right{
     width: 65%;
   }
-.button_col{
-  width: 50%;
-}
 
-.popup_col{
-  width: 260px;
-}
   .border-right {
     border-right: 1px solid black;
 }
@@ -130,8 +124,10 @@ td{
   input[type="text"]:focus{
     border-color: black;
   }
-  input[type="button"] {
+  /*change submit stuff to apply to buttons */
+  input[type="submit"] {
     border: none;
+    display: block;
     background-color: #840202;
     color: #fff;
     font-weight: bold;
@@ -144,10 +140,9 @@ td{
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    width: 75%;
   }
   
-  input[type="button"]:hover {
+  input[type="submit"]:hover {
     background-color: #5f0303;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -164,23 +159,5 @@ td{
       margin: auto;
       width: 25%;
   }
-  .modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(116, 116, 116, 0.7);
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.content {
-    position: relative;
-    background: white;
-    padding: 1em 2em;
-    border-radius: 6px;
-}
-
-.modal:target {
-    display: flex;
-}
+  
   
