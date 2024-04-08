@@ -1,4 +1,4 @@
-const form = document.getElementById('fitnessGoalSelect');
+const form = document.getElementById('fitnessTestForm');
   //Listens for when the submit button is clicked.
   form.addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent default form submission
