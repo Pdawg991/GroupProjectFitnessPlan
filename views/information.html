@@ -1,199 +1,211 @@
 <!DOCTYPE html>
-<html lang = "en">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-  </style>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="information.css">
+  <title>Personal Information</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
   <script src="../scripts/populateInfo.js"></script>
   <script src="../scripts/deleteAccount.js"></script>
   <script src = "../scripts/healthAnalytics.js"></script>
   <script src = "../scripts/updateAccount.js"></script>
-  <title>
-    Personal Information
-  </title>
-  <meta charset = "utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div id = "personal-info-wrap">
-    <div id = "personal-info">
-      <div class="row">
-        <div class="column left border-right" style="background-color:#aaa;">
-          <h2>Personal Info</h2> <!--Adjust this columns so they are the same size-->
-          <hr>
-          <h1>
-             Name: <p id="clientName"> 
+  <div class="wrapper">
+    <section class="main">
+      <h2>Personal Info</h2>
+      <hr>
+      <section class="table-container">
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td id="clientName">
               <script type="text">
                 document.write(displayName) 
               </script>
-              John Doe
-            </p>
-             Age: <p id="clientAge">
+            </td>
+          </tr>
+          <tr>
+            <td>Age:</td>
+            <td id="clientAge">
               <script type="text">
                 document.write(age) 
               </script> 
-              35
-              </p>
-             Current weight: <p id="curWeight">
+            </td>
+          </tr>
+          <tr>
+            <td>Current weight:</td>
+            <td id="curWeight">
               <script type="text">
                 document.write(weight) 
               </script>
-               </p>
-             Goal weight: <p id="goalWeight">
+            </td>
+          </tr>
+          <tr>
+            <td>Goal weight:</td>
+            <td id="goalWeight">
               <script type="text">
                 document.write(goal_weight) 
               </script>
-               </p>
-             Current max: <p id="curMax"> 50 lbs </p><!--replace placeholder and write current max var here using js-->
-             Goal max: <p id="goalMax"> 100 lbs </p><!--replace placeholder and write goal max var here using js-->
-             Fitness goal: <p id="fitGoal"> Lose Fat </p><!--replace placeholder and write fit goal var here using js-->
-          </h1>
-        </div>
-        <div class="column right" style="background-color:#bbb;">
-          <h2>Fitness and Diet Plans</h2> <!--Replace placeholders with values from database using js-->
-          <hr>
-          <table>
-            <tr>
-              <th>
-                Day
-              </th>
-              <th>
-                Workout
-              </th>
-              <th>
-                Diet
-              </th>
-            </tr>
-            <tr>
-              <td>
-                Monday
-              </td>
-              <td>
-                <script type="text">
-                  document.write(workouts) 
-                </script>
-              </td>
-              <td>
-                <script type="text">
-                  document.write(calories) 
-                </script>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Tuesday
-              </td>
-              <td>
-                <script type="text">
-                  document.write(workouts) 
-                </script>
-              </td>
-              <td>
-                <script type="text">
-                  document.write(calories) 
-                </script>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Wednesday
-              </td>
-              <td>
-                <script type="text">
-                  document.write(workouts) 
-                </script>
-              </td>
-              <td>
-                <script type="text">
-                  document.write(calories) 
-                </script>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Thursday
-              </td>
-              <td>
-                <script type="text">
-                  document.write(workouts) 
-                </script>
-              </td>
-              <td>
-                <script type="text">
-                  document.write(calories) 
-                </script>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Friday
-              </td>
-              <td>
-                <script type="text">
-                  document.write(workouts) 
-                </script>
-              </td>
-              <td>
-                <script type="text">
-                  document.write(calories) 
-                </script>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Saturday
-              </td>
-              <td>
-                <script type="text">
-                  document.write(workouts) 
-                </script>
-              </td>
-              <td>
-                <script type="text">
-                  document.write(calories) 
-                </script>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Sunday
-              </td>
-              <td>
-                <script type="text">
-                  document.write(workouts) 
-                </script>
-              </td>
-              <td>
-                <script type="text">
-                  document.write(calories) 
-                </script>
-              </td>
-            </tr>
-          </table>
-          <!--buttons to update info and delete account-->
-            <div class="row">
-              <div class="column button_col">
-                <form id = "updateInfo">
-                  <a href="../views/fitnessTest.html">
-                    <input type="button" id="update" value="Update Goal">
-                  </a>
-                </form>
-              </div>
-              <div class="column button_col"> <!--Create a popup that lets you update name and age or delete account-->
-                <form id = "changeAccount">
-                  <a href="#popup-box-1">
-                    <input type="button" id="change" value="Update Account">
-                  </a>
-                </form>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Current max:</td>
+            <td id="curMax">
+
+            </td>
+          </tr>
+          <tr>
+            <td>Goal max:</td>
+            <td id="goalMax">
+
+            </td>
+          </tr>
+          <tr>
+            <td>Fitness goal:</td>
+            <td id="fitGoal">
+              
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <h2>Fitness and Diet Plans</h2>
+      <hr>
+      <section class="table-container">
+        <table>
+          <tr>
+            <th>
+              Day
+            </th>
+            <th>
+              Workout
+            </th>
+            <th>
+              Diet
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Monday
+            </td>
+            <td>
+              <script type="text">
+                document.write(workouts) 
+              </script>
+            </td>
+            <td>
+              <script type="text">
+                document.write(calories) 
+              </script>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Tuesday
+            </td>
+            <td>
+              <script type="text">
+                document.write(workouts) 
+              </script>
+            </td>
+            <td>
+              <script type="text">
+                document.write(calories) 
+              </script>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Wednesday
+            </td>
+            <td>
+              <script type="text">
+                document.write(workouts) 
+              </script>
+            </td>
+            <td>
+              <script type="text">
+                document.write(calories) 
+              </script>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Thursday
+            </td>
+            <td>
+              <script type="text">
+                document.write(workouts) 
+              </script>
+            </td>
+            <td>
+              <script type="text">
+                document.write(calories) 
+              </script>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Friday
+            </td>
+            <td>
+              <script type="text">
+                document.write(workouts) 
+              </script>
+            </td>
+            <td>
+              <script type="text">
+                document.write(calories) 
+              </script>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Saturday
+            </td>
+            <td>
+              <script type="text">
+                document.write(workouts) 
+              </script>
+            </td>
+            <td>
+              <script type="text">
+                document.write(calories) 
+              </script>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sunday
+            </td>
+            <td>
+              <script type="text">
+                document.write(workouts) 
+              </script>
+            </td>
+            <td>
+              <script type="text">
+                document.write(calories) 
+              </script>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <form id="updateInfo">
+        <a href="../views/fitnessTest.html">
+          <input class="button" type="button" id="update" value="Update Goal">
+        </a>
+      </form>
+      <form id="changeAccount">
+        <a href="#popup-box-1">
+          <input class="button" type="button" id="change" value="Update Account">
+        </a>
+      </form>
+    </section>
   </div>
+
   <div id="popup-box-1" class="modal">
     <div class="content">
       <h2>
@@ -225,15 +237,7 @@
                 color: #fe0606;
                 font-size: 30px;
                 text-decoration: none;
-            "
-            >&times;</a
-        >
+            ">&times;</a>
     </div>
 </body>
-<footer>
-    
-</footer>
-<footer>
-    
-</footer>
 </html>
