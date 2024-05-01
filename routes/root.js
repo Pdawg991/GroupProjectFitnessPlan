@@ -7,6 +7,9 @@ const app = express();
 router.get('^/$|/fitnessTest(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'fitnessTest.html'));
 });
+router.get('^/$|/fitTest(.css)?', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'fitTest.css'));
+});
 router.get('^/$|/postFitTest(.js)?', (req, res) => {
     if (req.headers.referer && req.headers.referer.includes('fitnessTest.html')) {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'postFitTest.js'));
@@ -15,8 +18,15 @@ router.get('^/$|/postFitTest(.js)?', (req, res) => {
         res.status(403).send('Forbidden');
     }
 });
-router.get('^/$|/fitTest(.css)?', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'fitTest.css'));
+router.get('^/$|/logout.js', (req, res) => {
+    if (req.headers.referer && req.headers.referer.includes('fitnessTest.html')) 
+        res.sendFile(path.join(__dirname, '..', 'scripts', 'logout.js'));
+    else if(req.headers.referer && req.headers.referer.includes('information.html'))
+        res.sendFile(path.join(__dirname, '..', 'scripts', 'logout.js'));
+    else {
+        // If requested directly or from an unauthorized source, return 403 Forbidden
+        res.status(403).send('Forbidden');
+    }
 });
 
 router.get('^/$|/information(.html)?', (req, res) => {
@@ -25,6 +35,8 @@ router.get('^/$|/information(.html)?', (req, res) => {
 router.get('^/$|/information(.css)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'information.css'));
 });
+
+
 router.get('^/$|/login(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'login.html'));
 });
@@ -32,8 +44,6 @@ router.get('^/$|/login(.css)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'login.css'));
 });
 router.get('^/$|/login(.js)?', (req, res) => {
-    //res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));
-
     if (req.headers.referer && req.headers.referer.includes('login.html')) {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));
     } else {
@@ -41,6 +51,7 @@ router.get('^/$|/login(.js)?', (req, res) => {
         res.status(403).send('Forbidden');
     }
 });
+
 router.get('^/$|/register(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'register.html'));
 });

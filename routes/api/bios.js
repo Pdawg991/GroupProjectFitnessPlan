@@ -11,10 +11,16 @@ router.route('/')
 
 router.route('/find')
     .post(bioController.getBio);
-router.route('/getName')
-    .post(bioController.getName);
+router.route('/getClient')
+    .post(bioController.getClient);
 
 router.route('/createPi')
     .post(bioController.createNewPi);
-    
+
+router.route('/updateBio')
+    .put(bioController.updateBio);
+
+router.route('/updateAccount')
+    .patch(bioController.updateAccount);    
+
 module.exports = router;

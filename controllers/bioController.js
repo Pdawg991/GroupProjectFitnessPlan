@@ -5,10 +5,10 @@ const getAllBios = async (req, res) => {
     if(!bio) return res.status(204).json({'message' : 'No Bios found'});
     res.json(bio);
 }
-const getName = async(req, res) =>{
+const getClient = async(req, res) =>{
     const refreshToken = req.cookies.jwt;
     const foundUser = await UsernamePassword.findOne({refreshToken}).exec();
-    res.json(foundUser.clientName);
+    res.json(foundUser);
 }
 const createNewBio = async (req, res) => {
     const refreshToken = req.cookies.jwt;
@@ -84,11 +84,65 @@ const getBio = async (req, res) => {
     }
 };
 
+const updateBio = async(req, res) =>{
+    const refreshToken = req.cookies.jwt;
+    const foundUser = await UsernamePassword.findOne({refreshToken}).exec();
+    const {
+        fitness_goal, 
+        current_weight, 
+        goal_weight, 
+        height, 
+        clientAge, 
+        gender, 
+        fitness_level
+    } = req.body;
+
+    const result = await Bio.updateOne(
+        { username: foundUser.username },
+        { 
+            $set: {
+                fitness_goal,
+                current_weight,
+                goal_weight,
+                gender,
+                clientAge,
+                height,
+                fitness_level,
+                username: foundUser.username 
+            }
+        }
+    );
+    
+    res.json(result);
+}
+
+const updateAccount = async(req, res) =>{
+    const refreshToken = req.cookies.jwt;
+    const foundUser = await UsernamePassword.findOne({refreshToken}).exec();
+    const {
+        clientName,
+        clientAge
+    } = req.body;
+        console.log(clientAge);
+    const result = await UsernamePassword.updateOne(
+        { username: foundUser.username },
+        { 
+            $set: {
+                clientName,
+                clientAge
+            }
+        }
+    );
+    
+    res.json(result);
+}
 
 module.exports = {
-    getName,
+    getClient,
     getAllBios,
     createNewBio,
     createNewPi,
-    getBio
+    getBio,
+    updateBio,
+    updateAccount
 };

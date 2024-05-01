@@ -9,6 +9,8 @@
   <script src="../scripts/healthAnalytics.js"></script>
   <script src="../scripts/deleteAccount.js"></script>
   <script src = "../scripts/updateAccount.js"></script>
+  <script src = "../scripts/logout.js"></script>
+
 </head>
 <body>
   <div class="wrapper">
@@ -20,51 +22,38 @@
         <table>
           <tr>
             <td>Name:</td>
-            <td id="clientName">
-              <script type="text">
-                document.write(displayName) 
-              </script>
+            <td id="clientNameOutput">
             </td>
           </tr>
           <tr>
             <td>Age:</td>
-            <td id="clientAge">
-              <script type="text">
-                document.write(age) 
-              </script> 
+            <td id="clientAgeOutput">
             </td>
           </tr>
           <tr>
             <td>Current weight:</td>
-            <td id="curWeight">
-              <script type="text">
-                document.write(weight) 
-              </script>
+            <td id="curWeightOutput">
             </td>
           </tr>
           <tr>
             <td>Goal weight:</td>
-            <td id="goalWeight">
-              <script type="text">
-                document.write(goal_weight) 
-              </script>
+            <td id="goalWeightOutput">
             </td>
           </tr>
           <tr>
             <td>Height:</td>
-            <td id="height">
-
+            <td id="heightOutput">
             </td>
           </tr>
           <tr>
             <td>Gender:</td>
-            <td id="gender">
+            <td id="genderOutput">
 
             </td>
           </tr>
           <tr>
             <td>Fitness goal:</td>
-            <td id="fitGoal">
+            <td id="fitGoalOutput">
               
             </td>
           </tr>
@@ -210,18 +199,19 @@
   <div id="popup-box-1" class="modal">
     <div class="content">
       <h2>
-        Update Account Inforation
+        Update Account Information
       </h2>
       <p>
-        <form id = "updateAccount">
-          <input type="text" id="clientNameInput" name="clientName" placeholder = "Name" required><i class="validation"><span></span><span></span></i>
-        <br>    
-          <input type="text" id="clientAgeInput" name="clientAge" placeholder = "Age" required><i class="validation"><span></span><span></span></i>     
+        <form id = "updateForm">
+          <input type="text" id="clientName" name="clientName" placeholder = "Name" required><i class="validation"><span></span><span></span></i>
+          <br>    
+          <input type="text" id="clientAge" name="clientAge" placeholder = "Age" required><i class="validation"><span></span><span></span></i>
       </p>
       <div class="row">
         <div class="column popup_col">
-            <input type="button" id="updateAcc" value="Update Account">
-          </form>
+            <input type="button" id="updateAccount" value="Update Account">
+        </form>
+
         </div>
         <div class="column popup_col">
           <form id = "deleteAccount"> <!--Have this open another popup to confirm-->

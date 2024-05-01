@@ -18,10 +18,6 @@ const bioSchema = new Schema({
         type: Number,
         required: true
     }, 
-    clientAge: {
-        type: Number,
-        required: true
-    },
     gender: {
         type: String,
         enum: ['m', 'f'],
@@ -83,6 +79,10 @@ const usernamePasswordSchema = new Schema({
     },
     clientName:{
         type:String,
+        required: true
+    },
+    clientAge: {
+        type: Number,
         required: true
     },
     roles: {

@@ -238,7 +238,7 @@ const newData = async() => {
         body: JSON.stringify(data),
     });
     const resData = await response.json();
-    const response2 = await fetch('/bio/getName', {
+    const response2 = await fetch('/bio/getClient', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -248,8 +248,8 @@ const newData = async() => {
     });
         const nameRes = await response2.json();
         
-        const userData = new User(resData.clientAge, resData.current_weight, 
-            resData.gender, resData.height, nameRes, resData.goal_weight, 5);
+        const userData = new User(nameRes.clientAge, resData.current_weight, 
+            resData.gender, resData.height, nameRes.clientName, resData.goal_weight, 5);
             console.log(userData.BMR());
         const userWorkout = new Workout(resData.clientAge, resData.current_weight, 
             resData.gender, resData.height, nameRes, resData.goal_weight, 5); // tests everything

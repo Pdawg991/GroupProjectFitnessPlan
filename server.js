@@ -33,6 +33,7 @@ app.use(cookieParser());
 //Serve static files from public
 app.use(express.static(path.join(__dirname, 'public')));
 // routes
+app.get('/favicon.ico', (req, res) => res.status(204));
 app.use('/', require('./routes/root'));
 app.use('/auth', require('./routes/api/auth'));
 app.use('/refresh', require('./routes/api/refresh'));
