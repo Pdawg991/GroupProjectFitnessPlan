@@ -1,0 +1,14 @@
+20240430	12:55:26	50ae8141-14d1-4e9b-9b25-3cc66a1dabe8	Error: Not allowed by CORS
+20240430	12:55:28	88aa51dc-a8c8-494e-a7b3-a4bc2490a855	Error: Not allowed by CORS
+20240430	12:55:30	6a39ab7f-701c-4b10-bdee-273735ca25b3	Error: Not allowed by CORS
+20240430	12:57:24	13f8f2ae-85da-44c5-8351-ca5e21da2e09	Error: Not allowed by CORS
+20240430	12:57:25	df058566-53b9-410e-852b-2075c3533877	Error: Not allowed by CORS
+20240430	12:57:26	ce7b48c0-f2b8-4ec0-ba39-f590360aa6d1	Error: Not allowed by CORS
+20240430	12:57:56	3f030880-3afe-40f7-9120-c2cf10a69959	Error: Not allowed by CORS
+20240430	17:15:48	9ab44ef9-5c6c-40aa-90aa-20d425cad528	TypeError: Cannot read properties of undefined (reading 'username')
+20240430	17:17:14	f8dab29d-b9ff-4df3-bb49-96d57d099f37	TypeError: Cannot read properties of undefined (reading 'username')
+20240430	17:18:31	643c7ac4-4173-4e45-a707-821caa5c7d2c	TypeError: Cannot read properties of undefined (reading 'username')
+20240501	01:18:13	f6630ba5-ce30-46f1-a070-5f2e6b54e30b	SyntaxError: Unexpected token '"', ""name"" is not valid JSON
+20240501	01:18:29	8ac7056e-e34c-4b72-a21a-abb6ddd5fee9	SyntaxError: Unexpected token '"', ""myName"" is not valid JSON
+20240501	01:18:48	a53585ad-2eb0-4851-9b35-b98183045a0b	SyntaxError: Unexpected token '"', ""myName"" is not valid JSON
+20240501	01:19:58	14d9e23d-21d2-4ce1-95ac-21a1cd35720c	SyntaxError: "[object Object]" is not valid JSON

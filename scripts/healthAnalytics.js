@@ -1,3 +1,5 @@
+
+
 class User { // gathers general information from the user
     constructor(age, weight, gender, height, name, goal_weight, level){
         this.age = age;
@@ -221,9 +223,44 @@ class Workout extends User { //Generates the recommended calorie intake + workou
 }
 }
 
-const test = new User (29 , 180, 'm', 105, 'Matthew Gittens', 150, 5);
+
+const newData = async() => {
+    await sendRefreshToken();
+    const data = { sortBy: "createdAt", sortOrder: -1 };
+    
+    const response = await fetch('/bio/find', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        },
+        credentials: 'include',
+        body: JSON.stringify(data),
+    });
+    const resData = await response.json();
+    const response2 = await fetch('/bio/getName', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        },
+        credentials: 'include',
+    });
+        const nameRes = await response2.json();
+        
+        const userData = new User(resData.clientAge, resData.current_weight, 
+            resData.gender, resData.height, nameRes, resData.goal_weight, 5);
+            console.log(userData.BMR());
+        const userWorkout = new Workout(resData.clientAge, resData.current_weight, 
+            resData.gender, resData.height, nameRes, resData.goal_weight, 5); // tests everything
+            console.log(userWorkout.Display());
+}
+newData();
+
+
+/*const test = new User (29 , 180, 'm', 105, 'Matthew Gittens', 150, 5);
 console.log(test.BMR());//testes bmr function
 
 
 const test2 = new Workout(29, 180, 'm', 105, 'Matthew Gittens', 150, 5); // tests everything
-console.log(test2.Display());
+console.log(test2.Display());*/

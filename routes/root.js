@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const app = express();
 
+
 router.get('^/$|/fitnessTest(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'fitnessTest.html'));
 });
@@ -45,6 +46,14 @@ router.get('^/$|/register(.html)?', (req, res) => {
 });
 router.get('^/$|/register(.css)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'register.css'));
+});
+router.get('^/$|/registerUser(.js)?', (req, res) => {
+    if (req.headers.referer && req.headers.referer.includes('register.html')) {
+        res.sendFile(path.join(__dirname, '..', 'scripts', 'registerUser.js'));
+    } else {
+        // If requested directly or from an unauthorized source, return 403 Forbidden
+        res.status(403).send('Forbidden');
+    }
 });
 
 router.get('^/$|/info(.js)?', (req, res) => {

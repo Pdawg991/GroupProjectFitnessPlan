@@ -1,33 +1,55 @@
-const { Bio, PersonalInfo } = require('../model/Bio');
+const { Bio, PersonalInfo, UsernamePassword} = require('../model/Bio');
 
 const getAllBios = async (req, res) => {
     const bio = await Bio.find();
     if(!bio) return res.status(204).json({'message' : 'No Bios found'});
     res.json(bio);
 }
+const getName = async(req, res) =>{
+    const refreshToken = req.cookies.jwt;
+    const foundUser = await UsernamePassword.findOne({refreshToken}).exec();
+    res.json(foundUser.clientName);
+}
 const createNewBio = async (req, res) => {
+    const refreshToken = req.cookies.jwt;
+    const foundUser = await UsernamePassword.findOne({refreshToken}).exec();
     const bio = await Bio.find();
     if(!bio) return res.status(204).json({'message' : 'No Bios found'});
-    const { fitness_goal, current_weight, 
-        goal_weight, current_max, 
-        goal_max, fitness_level } = req.body;
+    const { 
+        fitness_goal, 
+        current_weight, 
+        goal_weight, 
+        height, 
+        clientAge, 
+        gender, 
+        fitness_level } = req.body;
 
     // Create a new document in the database
     const result = await Bio.create({
         fitness_goal, 
-        current_weight, 
+        current_weight,
         goal_weight, 
-        current_max, 
-        goal_max, 
-        fitness_level
+        gender, 
+        clientAge, 
+        height, 
+        fitness_level,
+        username:foundUser.username
     });
     res.status(201).json(result);
 }
 const createNewPi = async (req, res) => {
+
     const bio = await PersonalInfo.find();
     if(!bio) return res.status(204).json({'message' : 'No Personal Informatino found'});
-    const { age, current_weight, current_height, gender, 
-        name, goal_weight,level } = req.body;
+    const { 
+        age, 
+        current_weight, 
+        current_height, 
+        gender, 
+        name, 
+        goal_weight,
+        level } = req.body;
+
     // Create a new document in the database
     const result = await PersonalInfo.create({
         age, 
@@ -43,8 +65,10 @@ const createNewPi = async (req, res) => {
 
 const getBio = async (req, res) => {
     try {
+        const refreshToken = req.cookies.jwt;
+        const foundUser = await UsernamePassword.findOne({refreshToken}).exec();
         // Find the newest document based on the createdAt field
-        const bio = await Bio.findOne().sort({ createdAt: -1 });
+        const bio = await Bio.findOne({username: foundUser.username}).sort({ createdAt: -1});
 
         // If no document is found, return a 404 status code
         if (!bio) {
@@ -62,6 +86,7 @@ const getBio = async (req, res) => {
 
 
 module.exports = {
+    getName,
     getAllBios,
     createNewBio,
     createNewPi,
