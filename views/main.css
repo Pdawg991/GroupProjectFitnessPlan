@@ -108,6 +108,21 @@ input:focus {
     background-color: #5f0303;
 }
 
+.logout-button{
+    border: none;
+    width: 150px;
+    margin-left: 760px;
+    background-color: #840202;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    text-align: center;
+}
+
 .checkboxes {
     text-align: center;
     margin-right: 17px;
