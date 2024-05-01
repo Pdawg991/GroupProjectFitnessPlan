@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +10,31 @@
   <script src="../scripts/healthAnalytics.js"></script>
   <script src="../scripts/deleteAccount.js"></script>
   <script src = "../scripts/updateAccount.js"></script>
-  <script src = "../scripts/logout.js"></script>
-
 </head>
 <body>
   <div class="wrapper">
+    <header><h1>MyFit</h1></header>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <div>
+                    <li><a href="fitnessTest.html">Your Fitness</a></li>
+                    <li><a href="workouts.html">Workout Plan</a></li>
+                    <li><a href="diets.html">Diet Plan</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="active" href="information.html">Account</a></li>
+                </div>
+                <div class="log-out">
+                <li><a href="logout.html">Log Out</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
     <section class="main">
-      <input class="button logout-button" id="logout" value="Log Out">
+      <!-- Added to navbar
+        <input class="button logout-button" id="logout" value="Log Out"> -->
       <h2>Personal Info</h2>
       <hr>
       <section class="table-container">
@@ -23,26 +42,39 @@
           <tr>
             <td>Name:</td>
             <td id="clientNameOutput">
+              <script type="text">
+                document.write(displayName) 
+              </script>
             </td>
           </tr>
           <tr>
             <td>Age:</td>
             <td id="clientAgeOutput">
+              <script type="text">
+                document.write(age) 
+              </script> 
             </td>
           </tr>
           <tr>
             <td>Current weight:</td>
             <td id="curWeightOutput">
+              <script type="text">
+                document.write(weight) 
+              </script>
             </td>
           </tr>
           <tr>
             <td>Goal weight:</td>
             <td id="goalWeightOutput">
+              <script type="text">
+                document.write(goal_weight) 
+              </script>
             </td>
           </tr>
           <tr>
             <td>Height:</td>
             <td id="heightOutput">
+
             </td>
           </tr>
           <tr>
@@ -58,136 +90,7 @@
             </td>
           </tr>
         </table>
-      </section>
-
-      <h2>Fitness and Diet Plans</h2>
-      <hr>
-      <section class="table-container">
-        <table>
-          <tr>
-            <th>
-              Day
-            </th>
-            <th>
-              Workout
-            </th>
-            <th>
-              Diet
-            </th>
-          </tr>
-          <tr>
-            <td>
-              Monday
-            </td>
-            <td>
-              <script type="text">
-                document.write(workouts) 
-              </script>
-            </td>
-            <td>
-              <script type="text">
-                document.write(calories) 
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Tuesday
-            </td>
-            <td>
-              <script type="text">
-                document.write(workouts) 
-              </script>
-            </td>
-            <td>
-              <script type="text">
-                document.write(calories) 
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Wednesday
-            </td>
-            <td>
-              <script type="text">
-                document.write(workouts) 
-              </script>
-            </td>
-            <td>
-              <script type="text">
-                document.write(calories) 
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Thursday
-            </td>
-            <td>
-              <script type="text">
-                document.write(workouts) 
-              </script>
-            </td>
-            <td>
-              <script type="text">
-                document.write(calories) 
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Friday
-            </td>
-            <td>
-              <script type="text">
-                document.write(workouts) 
-              </script>
-            </td>
-            <td>
-              <script type="text">
-                document.write(calories) 
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Saturday
-            </td>
-            <td>
-              <script type="text">
-                document.write(workouts) 
-              </script>
-            </td>
-            <td>
-              <script type="text">
-                document.write(calories) 
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Sunday
-            </td>
-            <td>
-              <script type="text">
-                document.write(workouts) 
-              </script>
-            </td>
-            <td>
-              <script type="text">
-                document.write(calories) 
-              </script>
-            </td>
-          </tr>
-        </table>
-      </section>
-
-      <form id="updateInfo">
-        <a href="../views/fitnessTest.html">
-          <input class="button" type="button" id="update" value="Update Goal">
-        </a>
-      </form>
+      </section>      
       <form id="changeAccount">
         <a href="#popup-box-1">
           <input class="button" type="button" id="change" value="Update Account">
@@ -199,19 +102,18 @@
   <div id="popup-box-1" class="modal">
     <div class="content">
       <h2>
-        Update Account Information
+        Update Account Inforation
       </h2>
       <p>
-        <form id = "updateForm">
-          <input type="text" id="clientName" name="clientName" placeholder = "Name" required><i class="validation"><span></span><span></span></i>
-          <br>    
-          <input type="text" id="clientAge" name="clientAge" placeholder = "Age" required><i class="validation"><span></span><span></span></i>
+        <form id = "updateAccount">
+          <input type="text" id="clientNameInput" name="clientName" placeholder = "Name" required><i class="validation"><span></span><span></span></i>
+        <br>    
+          <input type="text" id="clientAgeInput" name="clientAge" placeholder = "Age" required><i class="validation"><span></span><span></span></i>     
       </p>
       <div class="row">
         <div class="column popup_col">
-            <input type="button" id="updateAccount" value="Update Account">
-        </form>
-
+            <input type="button" id="updateAcc" value="Update Account">
+          </form>
         </div>
         <div class="column popup_col">
           <form id = "deleteAccount"> <!--Have this open another popup to confirm-->

@@ -32,17 +32,28 @@ router.get('^/$|/logout.js', (req, res) => {
 router.get('^/$|/information(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'information.html'));
 });
-router.get('^/$|/information(.css)?', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'information.css'));
+
+router.get('^/$|/workouts(.html)?', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'workouts.html'));
 });
 
+router.get('^/$|/workouts(.html)?', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'workouts.html'));
+});
+router.get('^/$|/diets(.html)?', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'diets.html'));
+});
+router.get('^/$|/progress(.html)?', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'progress.html'));
+});
+router.get('^/$|/contact(.html)?', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'contact.html'));
+});
 
 router.get('^/$|/login(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'login.html'));
 });
-router.get('^/$|/login(.css)?', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'login.css'));
-});
+
 router.get('^/$|/login(.js)?', (req, res) => {
     if (req.headers.referer && req.headers.referer.includes('login.html')) {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));

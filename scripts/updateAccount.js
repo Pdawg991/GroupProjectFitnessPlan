@@ -19,5 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 credentials: 'include',
                 body: JSON.stringify(data)
             });
+            location.reload();
         });
 });

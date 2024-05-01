@@ -7,10 +7,51 @@ body {
     padding: 0;
 }
 
+header {
+    text-align: center;
+    background-color: #840202;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
 h2 {
-    font-weight: 300;
     text-align: center;
     color: #840202;
+}
+
+.navbar li {
+    float: none;
+}
+
+.navbar li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+.navbar li a:hover:not(.active) {
+    background-color: #555;
+}
+
+.active {
+    background-color: #ac0202;
+}
+
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
 .main {
@@ -52,7 +93,7 @@ select:focus {
     border: 2px solid black;
 }
 
-input {
+input, textarea {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -61,6 +102,11 @@ input {
     line-height: 60px;
     border-radius: 4px;
     margin-bottom: 20px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
 }
 
 label {
@@ -106,21 +152,6 @@ input:focus {
 
 .button:hover {
     background-color: #5f0303;
-}
-
-.logout-button{
-    border: none;
-    width: 150px;
-    margin-left: 760px;
-    background-color: #840202;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    font-size: 18px;
-    text-align: center;
 }
 
 .checkboxes {
@@ -238,6 +269,14 @@ a:hover {
         padding: 8px 0;
     }
 
+   .navbar li {
+    float: left;
+   }
+
+   .log-out {
+    float: right;
+    }
+
     .main {
         width: 80%;
         padding: 15px;
@@ -278,6 +317,10 @@ a:hover {
 
     header {
         font-size: 20px;
+    }
+
+    .navbar {
+        font-size: 18px;
     }
 
     .main {
