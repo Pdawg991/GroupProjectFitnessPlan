@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Diet Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+</head>
+<body>
+    <div class="wrapper">
+        <header><h1>MyFit</h1></header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <div>
+                        <li><a href="fitnessTest.html">Your Fitness</a></li>
+                        <li><a href="workouts.html">Workout Plan</a></li>
+                        <li><a class="active" href="diets.html">Diet Plan</a></li>
+                        <li><a href="progress.html">Progress</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="information.html">Account</a></li>
+                    </div>
+                    <div class="log-out">
+                    <li><a href="logout.html">Log Out</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        
+        <section class="main">
+            <h2>Diet Plan</h2>
+
+            <label for="dietDay">Select Day:</label>
+            <select id="dietDay">
+                <option value="" disabled selected>Select Goal</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+
+            <section class="table-container">
+                <table id="dietTable">
+                    <tr>
+                        <th>
+                          Breakfast
+                        </th>
+                        <th>
+                          Lunch
+                        </th>
+                        <th>
+                          Dinner
+                        </th>
+                      </tr>
+                </table>
+              </section>
+        </section>
+    </div>
+</body>
+</html>

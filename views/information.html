@@ -12,8 +12,28 @@
 </head>
 <body>
   <div class="wrapper">
+    <header><h1>MyFit</h1></header>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <div>
+                    <li><a href="fitnessTest.html">Your Fitness</a></li>
+                    <li><a href="workouts.html">Workout Plan</a></li>
+                    <li><a href="diets.html">Diet Plan</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="active" href="information.html">Account</a></li>
+                </div>
+                <div class="log-out">
+                <li><a href="logout.html">Log Out</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
     <section class="main">
-      <input class="button logout-button" id="logout" value="Log Out">
+      <!-- Added to navbar
+        <input class="button logout-button" id="logout" value="Log Out"> -->
       <h2>Personal Info</h2>
       <hr>
       <section class="table-container">
@@ -71,6 +91,7 @@
         </table>
       </section>
 
+      <!-- Remove this code
       <h2>Fitness and Diet Plans</h2>
       <hr>
       <section class="table-container">
@@ -192,13 +213,15 @@
             </td>
           </tr>
         </table>
-      </section>
+      </section> -->
 
+      <!--Not needed since navbar
       <form id="updateInfo">
         <a href="../views/fitnessTest.html">
           <input class="button" type="button" id="update" value="Update Goal">
         </a>
-      </form>
+      </form> -->
+      
       <form id="changeAccount">
         <a href="#popup-box-1">
           <input class="button" type="button" id="change" value="Update Account">
