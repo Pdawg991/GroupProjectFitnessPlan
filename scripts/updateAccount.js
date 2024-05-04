@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    const updateAccount = document.getElementById('updateAccount');
+    const updateAccountButton = document.getElementById('updateAccount');
+        updateAccountButton.addEventListener('click', async function(event) {
+            event.preventDefault();
+            await sendRefreshToken();
 
-updateAccount.addEventListener('click', function(event) {
-    event.preventDefault();
-
-
-    const payload = new FormData(updateAccount);
-    console.log(...payload);
-    console.log(payload.get('clientNameInput'));
-    console.log(payload.get('clientAgeInput'));
-
-    
-    document.getElementById('clientName').textContent = payload.get('clientName');
-    document.getElementById('clientAge').textContent = payload.get('clientAge');
+            const payload = new FormData(document.getElementById('updateForm'));
+            console.log(...payload);
+            const data = {
+                clientName: payload.get('clientName'),
+                clientAge: payload.get('clientAge')
+            };
+            const response = await fetch('/bio/updateAccount', {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                },
+                credentials: 'include',
+                body: JSON.stringify(data)
+            });
+            location.reload();
+        });
 });
-});
-

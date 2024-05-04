@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="../scripts/healthAnalytics.js"></script>
   <title>Workout Plan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
@@ -29,19 +30,10 @@
 
         <section class="main">
             <h2>Workout Plan</h2>
-
-            <label for="workoutDay">Select Day:</label>
-            <select id="workoutDay">
-                <option value="" disabled selected>Select Goal</option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-                <option value="Saturday">Saturday</option>
-                <option value="Sunday">Sunday</option>
-            </select>
-
+            <div class = "description">
+                Below is your given workout. To maximize results, do this at least three times a week, follow your diet plan, and get adequate rest.
+            </div>
+            <br><br>
             <section class="table-container">
                 <table id="workoutTable">
                     <tr>

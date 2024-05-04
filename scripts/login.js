@@ -24,7 +24,6 @@ const sendLogin = async(data) =>{
   });
   
   const newestPlan = { sortBy: "createdAt", sortOrder: -1 };
-    
   const checkForPlan = await fetch('/bio/find', {
       method: "POST",
       headers: {
@@ -34,8 +33,9 @@ const sendLogin = async(data) =>{
       credentials: 'include',
       body: JSON.stringify(newestPlan),
   });
+  const resFromPlan = checkForPlan.status;
   if(response.ok){
-    if(!checkForPlan.ok) window.location.href = 'fitnessTest.html';
+    if(resFromPlan == 404) window.location.href = 'fitnessTest.html';
     else window.location.href = 'information.html';
   }
 }

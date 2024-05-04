@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
               selectedFitnessLevel = parseInt(radio.id.replace('level', ''));
           }
       });
-
-
       
       // Get access token and send fitness test data
       await sendRefreshToken();
@@ -41,6 +39,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const sendFitTest = async (data) => {
   try {
+//LOOK FOR DOC
+const newestPlan = { sortBy: "createdAt", sortOrder: -1 };
+const checkForPlan = await fetch('/bio/find', {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+    },
+    credentials: 'include',
+    body: JSON.stringify(newestPlan),
+});
+    if(!checkForPlan.ok){
       const response = await fetch('/bio', {
           method: "POST",
           headers: {
@@ -57,6 +67,21 @@ const sendFitTest = async (data) => {
           throw new Error(`${response.status} ${response.statusText}`);
       }
       window.location.href = 'information.html';
+    }
+    else{
+        //PATCH
+        await fetch('/bio/updateBio', {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            },
+            credentials: 'include',
+            body: JSON.stringify(data),
+        });
+        window.location.href = 'information.html';
+    }
+
   } catch (error) {
       console.error('Error sending fitness test data:', error);
       // Handle the error as needed

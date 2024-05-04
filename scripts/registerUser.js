@@ -5,12 +5,11 @@ const form = document.getElementById('registrationForm');
   //Gets the values contained in the form wrapper.
   const payload = new FormData(form);
 
-
 const data = {
     user: payload.get('regUsername'),
     pwd: payload.get('regPassword'),
-    clientName: payload.get('clientName')
-
+    clientName: payload.get('clientName'),
+    clientAge: payload.get('clientAge')
 };
 
 fetch('/register', {

@@ -1,6 +1,5 @@
 const { UsernamePassword } = require('../model/Bio');
 
-
 const handleLogout = async (req, res)=> {
     //On client, delete accessToken
     const cookies = req.cookies;
@@ -16,7 +15,6 @@ const handleLogout = async (req, res)=> {
     //Delete refreshToken
     foundUser.refreshToken = '';
         const result = await foundUser.save();
-        console.log(result);
         res.clearCookie('jwt', {httpOnly: true}); //Secure: true - only server on https
         res.sendStatus(204);
     }
