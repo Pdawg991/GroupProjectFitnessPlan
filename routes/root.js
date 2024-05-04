@@ -88,7 +88,7 @@ router.get('^/$|/info(.js)?', (req, res) => {
 });
 
 router.get('^/$|/healthAnalytics(.js)?', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('information.html')) {
+    if (req.headers.referer && req.headers.referer.includes('workouts.html')) {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'healthAnalytics.js'));
     } else {
         // If requested directly or from an unauthorized source, return 403 Forbidden

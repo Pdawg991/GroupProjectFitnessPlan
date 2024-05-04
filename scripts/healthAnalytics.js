@@ -96,7 +96,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
         if(this.weight > this.goal_weight){ // Goal is to lose weight, HIIT exercises
             switch(this.level){ 
                 case 1:
-                workouts.push = (
+                workouts.push (
                     ["Exercise: Jumping Jacks", "Work Time: 30 seconds", "Rest time: 20 seconds" ],
                     ["Exercise: High Knees", "Work Time: 30 seconds", "Rest time: 20 seconds"],
                     ["Exercise: Plank", "Work Time: 30 seconds", "Rest time: 20 seconds"],
@@ -106,7 +106,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
                 );
                 break;
                 case 2:
-                    workouts.push = (
+                    workouts.push (
                         ["Exercise: Jumping Jacks", "Work Time: 45 seconds", "Rest time: 20 seconds"],
                         ["Exercise: High Knees", "Work Time: 45 seconds", "Rest time: 20 seconds"],
                         ["Exercise: Plank", "Work Time: 45 seconds", "Rest time: 20 seconds"],
@@ -116,7 +116,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
                     );
                     break;
                 case 3:
-                    workouts.push = (
+                    workouts.push (
                         ["Exercise: Burpees", "Work Time: 45 seconds", "Rest time: 15 seconds"],
                         ["Exercise: High Knees", "Work Time: 45 seconds", "Rest time: 15 seconds"],
                         ["Exercise: Russian Twists", "Work Time: 45 seconds", "Rest time: 15 seconds"],
@@ -139,7 +139,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
                 workouts.push (
                     ["Exercise: Burpees", "Work Time: 45 seconds", "Rest time: 15 seconds"],
                     ["Exercise: Jump Rope", "Work Time: 60 seconds", "Rest time: 15 seconds"],
-                    ["Exercise: Mountain Climbers", "Work Time: 45 seconds", "Rest time: 15 seconds"]
+                    ["Exercise: Mountain Climbers", "Work Time: 45 seconds", "Rest time: 15 seconds"],
                     ["Exercise: Russian Twists", "Work Time: 45 seconds", "Rest time: 15 seconds"],
                     ["Exercise: Archer Pushups", "Number of reps: 3 - 7 (each side)", " Rest time: 15 seconds"],
                     ["Exercise: Diamond Pushups", "Number of reps: 7 - 10", "Rest time: 15 seconds"],
@@ -155,7 +155,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
         if(this.weight < this.goal_weight){ //goal is to build muscle, hypertrophy and strength training
             switch(this.level){ 
                 case 1:
-                workouts.push = (
+                workouts.push(
                     ["Exercise: Knee Assisted Pushups", "Number of reps: 5 - 10", "Rest time: 45 seconds" ],
                     ["Exercise: Assisted Squats", "Number of reps: 5 - 10", "Rest time: 45 seconds"],
                     ["Exercise: Sit ups", "Number of reps: 5 - 10", "Rest time: 45 seconds"],
@@ -165,7 +165,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
                 );
                 break;
                 case 2:
-                    workouts.push = (
+                    workouts.push(
                         ["Exercise: Pushups", "Number of reps: 5 - 10", "Rest time: 45 seconds" ],
                         ["Exercise: Squats", "Number of reps: 5 - 10", "Rest time: 45 seconds"],
                         ["Exercise: Sit ups", "Number of reps: 10 - 15", "Rest time: 45 seconds"],
@@ -175,7 +175,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
                     );
                     break;
                 case 3:
-                    workouts.push = (
+                    workouts.push(
                         ["Exercise: Pushups", "Number of reps: 15", "Rest time: 45 seconds" ],
                         ["Exercise: Squats", "Number of reps: 15 - 20", "Rest time: 45 seconds"],
                         ["Exercise: Sit ups", "Number of reps: 25+", "Rest time: 45 seconds"],
@@ -185,7 +185,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
                     );
                     break;
                 case 4:
-                    workouts.push (
+                    workouts.push(
                         ["Exercise: Diamond Pushups", "Number of reps: 15", "Rest time: 45 seconds" ],
                         ["Exercise: Archer Squats", "Number of reps: 10 (each side)", "Rest time: 45 seconds"],
                         ["Exercise: Bicycle crunches", "Workout time: 45 seconds", "Rest Time: 20 seconds"],
@@ -195,7 +195,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
                     );
                     break;
                 case 5: 
-                workouts.push (
+                workouts.push(
                         ["Exercise: Diamond Pushups", "Number of reps: 15", "Rest time: 45 seconds" ],
                         ["Exercise: Archer Squats", "Number of reps: 10 (each side)", "Rest time: 45 seconds"],
                         ["Exercise: Bicycle crunches", "Workout time: 45 seconds", "Rest Time: 20 seconds"],
@@ -213,7 +213,7 @@ class Workout extends User { //Generates the recommended calorie intake + workou
     Display(){
         if(this.weight>this.goal_weight){
         return (`Your goal is to lose weight. To achieve your goal you must eat ${this.CalIntake()} calories daily. Check food labels to confirm the amount of calories in each food item.\n
-    Below is your given workout. Do this atleast 3 times a week and get adequate rest. \n ${this.Exercises()}`);
+        Below is your given workout. Do this atleast 3 times a week and get adequate rest. \n ${this.Exercises()}`);
          }
          if(this.weight<this.goal){
             return (`Your goal is to build muscle and strength. To achieve your goal you must eat ${this.CalIntake()} calories daily. Check food labels to confirm the amount of calories in each food item.\n
@@ -223,7 +223,23 @@ class Workout extends User { //Generates the recommended calorie intake + workou
 }
 }
 
-
+const sendRefreshToken = async () => {
+    try {
+        const response = await fetch('/refresh', {
+            method: "GET",
+            credentials: 'include'
+        });
+        if (!response.ok) {
+            throw new Error(`${response.status} ${response.statusText}`);
+        }
+        const responseBody = await response.json();
+        localStorage.setItem('accessToken', responseBody.accessToken);
+    } catch (error) {
+        console.error('Error refreshing token:', error);
+        // Handle the error as needed
+        return null;
+    }
+  };
 const newData = async() => {
     await sendRefreshToken();
     const data = { sortBy: "createdAt", sortOrder: -1 };
@@ -250,10 +266,18 @@ const newData = async() => {
         
         const userData = new User(nameRes.clientAge, resData.current_weight, 
             resData.gender, resData.height, nameRes.clientName, resData.goal_weight, 5);
-            console.log(userData.BMR());
+            //console.log(userData.BMR());
         const userWorkout = new Workout(resData.clientAge, resData.current_weight, 
             resData.gender, resData.height, nameRes, resData.goal_weight, 5); // tests everything
-            console.log(userWorkout.Display());
+            const exercises = userWorkout.Exercises();
+
+            var tableBody = document.getElementById("workoutTable");
+            tableBody.innerHTML = "<tr><th>Exercise</th><th>Reps/Duration</th><th>Rest Time</th></tr>";
+            
+            // Populate table with exercise data
+            exercises.forEach(exercise => {
+              var row = `<tr><td>${exercise[0]}</td><td>${exercise[1]}</td><td>${exercise[2]}</td></tr>`;
+              tableBody.innerHTML += row;});
 }
 newData();
 
