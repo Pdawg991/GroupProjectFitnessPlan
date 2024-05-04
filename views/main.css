@@ -105,6 +105,10 @@ input[type=radio] {
     width: 50%;
 }
 
+.description{
+    text-align: center;
+}
+
 .dropdown{
     height: 60px;
 }
