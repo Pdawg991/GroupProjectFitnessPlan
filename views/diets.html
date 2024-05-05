@@ -29,35 +29,33 @@
         
         <section class="main">
             <h2>Diet Plan</h2>
-
-            <label for="dietDay">Select Day:</label>
-            <select id="dietDay">
-                <option value="" disabled selected>Select Goal</option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-                <option value="Saturday">Saturday</option>
-                <option value="Sunday">Sunday</option>
-            </select>
-
+            <div class = "description">
+                To achive your goal you must eat <span id="totalCalories">___</span> calories a day. Check food lables to confirm the amount of calories in each food item.
+            </div>
+            <br><br>
             <section class="table-container">
                 <table id="dietTable">
                     <tr>
                         <th>
-                          Breakfast
+                          Protein
                         </th>
                         <th>
-                          Lunch
+                          Fat
                         </th>
                         <th>
-                          Dinner
-                        </th>
+                            Carbs
+                          </th>
+                          <th>
+                            Water
+                          </th>
+                          <th>
+                            Fiber
+                          </th>
                       </tr>
                 </table>
               </section>
         </section>
     </div>
+    <script src = "../scripts/getDiet.js" ></script>
 </body>
 </html>

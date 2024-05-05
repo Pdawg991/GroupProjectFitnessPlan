@@ -7,20 +7,21 @@ const verifyRoles = require('../../middleware/verifyRoles');
 
 router.route('/')
     .get(bioController.getAllBios)
-    .post(verifyRoles(ROLES_LIST.User), bioController.createNewBio);
+    .post(bioController.createNewBio);
 
 router.route('/find')
     .post(bioController.getBio);
+
 router.route('/getClient')
     .post(bioController.getClient);
-
-router.route('/createPi')
-    .post(bioController.createNewPi);
 
 router.route('/updateBio')
     .put(bioController.updateBio);
 
 router.route('/updateAccount')
-    .patch(bioController.updateAccount);    
+    .patch(bioController.updateAccount);  
+
+router.route('/updatePlan')
+    .patch(bioController.updatePlan)
 
 module.exports = router;

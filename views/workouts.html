@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="../scripts/healthAnalytics.js"></script>
   <title>Workout Plan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
@@ -21,27 +20,16 @@
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="information.html">Account</a></li>
                     </div>
-                    <div class="log-out">
-                    <li><a href="logout.html">Log Out</a></li>
-                    </div>
+                    <div class="log-out" id = "logout">
+                      <li><a href="login.html">Log Out</a></li>
+                      </div>
                 </ul>
             </nav>
         </div>
 
         <section class="main">
             <h2>Workout Plan</h2>
-
-            <label for="workoutDay">Select Day:</label>
-            <select id="workoutDay">
-                <option value="" disabled selected>Select Goal</option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-                <option value="Saturday">Saturday</option>
-                <option value="Sunday">Sunday</option>
-            </select>
+            <div class = "description" id="WorkoutNotes"></div>
 
             <section class="table-container">
                 <table id="workoutTable">
@@ -60,6 +48,9 @@
               </section>
         </section>
     </div>
+  <script src="../scripts/getWorkouts.js"></script>
+  <script src="../scripts/logout.js"></script>
+
 </body>
 </html>
 

@@ -15,12 +15,12 @@ sendLogin(data);
 });
 const sendLogin = async(data) =>{
  const response = await fetch('/auth', {
-    method: "POST",
-    headers: {
-    'Content-Type': 'application/json'
-    },
-    credentials: 'include',
-    body: JSON.stringify(data)
+      method: "POST",
+      headers: {
+      'Content-Type': 'application/json'
+      },
+      credentials: 'include',
+      body: JSON.stringify(data)
   });
   
   const newestPlan = { sortBy: "createdAt", sortOrder: -1 };
@@ -33,9 +33,10 @@ const sendLogin = async(data) =>{
       credentials: 'include',
       body: JSON.stringify(newestPlan),
   });
-  const resFromPlan = checkForPlan.status;
   if(response.ok){
-    if(resFromPlan == 404) window.location.href = 'fitnessTest.html';
+    console.log(checkForPlan.status);
+    if(checkForPlan.status == 404) window.location.href = 'fitnessTest.html';
     else window.location.href = 'information.html';
   }
+  else window.location.href = "login.html";
 }
