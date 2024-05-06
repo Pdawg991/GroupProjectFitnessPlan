@@ -16,7 +16,8 @@ const sendRefreshToken = async () => {
         // Handle the error as needed
         return null;
     }
-  };
+};
+
 // Function to handle form submission
 async function handleSubmit(event) {
     event.preventDefault();
@@ -28,9 +29,10 @@ async function handleSubmit(event) {
         email: document.getElementById('email').value,
         message: document.getElementById('message').value
     };
+
     // Send form data to server using fetch API
     await sendRefreshToken();
-    await fetch('/contact', {
+    fetch('/contact', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -47,12 +49,12 @@ async function handleSubmit(event) {
     })
     .then(data => {
         console.log(data); // Log the server response
-        // Display success message to the user
-        document.getElementById('messageContainer').innerHTML = '<p>Your message was sent successfully! We\'ll get back to you as soon as possible.</p>';
+        // Show success pop-up message
+        alert('Your message was sent successfully! We\'ll get back to you as soon as possible.');
     })
     .catch(error => {
         console.error('Error:', error); // Log any errors
-        // Display error message to the user
-        document.getElementById('messageContainer').innerHTML = '<p>There was an error sending your message. Please try again later.</p>';
+        // Show error pop-up message
+        alert('There was an error sending your message. Please try again later.');
     });
 }
