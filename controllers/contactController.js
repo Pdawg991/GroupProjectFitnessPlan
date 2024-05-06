@@ -8,14 +8,14 @@ const handleContact = async (req, res) => {
       secureConnection: false,
       port: 587,
       auth: {
-        user: 'myfitnessfinalproject@outlook.com',
-        pass: 'MyFitEmail'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD
       }
     });
 
   let mailOptions = {
-    from: 'myfitnessfinalproject@outlook.com',
-    to: 'myfitnessfinalproject@outlook.com',
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER,
     subject: 'Contact Us',
     text: `Name: ${firstname} ${lastname}\nEmail: ${email}\n\nMessage: ${message}`
   };
