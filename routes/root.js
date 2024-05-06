@@ -29,6 +29,10 @@ router.get('^/$|/logout.js', checkReferer, (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'scripts', 'logout.js'));
 });
 
+router.get('^/$|/contactUs.js', checkReferer, (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'scripts', 'contactUs.js'));
+});
+
 router.get('^/$|/getWorkouts.js',checkReferer, (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'scripts', 'getWorkouts.js'));
 });
@@ -87,7 +91,7 @@ router.get('^/$|/populateInfo(.js)?', checkReferer, (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'populateInfo.js'));
 });
 
-router.get('^/$|/deleteAccount(.js)?',checkReferer, (req, res) => {
+router.get('^/$|/deleteAccount(.js)?', checkReferer, (req, res) => {
        res.sendFile(path.join(__dirname, '..', 'scripts', 'deleteAccount.js'));
 });
 

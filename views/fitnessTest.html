@@ -8,11 +8,27 @@
 </head>
 <body>
   <div class="wrapper">
+    <header><h1>MyFit</h1></header>
+    <div class="navbar">
+        <nav>
+            <ul>
+              <div>
+                <li><a class="active" href="fitnessTest.html">Fitness Test</a></li>
+                <li><a href="workouts.html">Workout Plan</a></li>
+                <li><a href="diets.html">Diet Plan</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="information.html">Account</a></li>
+              </div>
+              <div class="log-out" id="logout">
+                <li><a href="login.html">Log Out</a></li>
+              </div>
+            </ul>
+        </nav>
+    </div>
     <section class="main">
-      <input class="button logout-button" id="logout" value="Log Out">
       <form id="fitnessTestForm">
         <label for="gender">What is your gender?</label><br>
-        <select class = "dropdown" id="gender" name="gender">
+        <select class = "dropdown" class = "dropdown" id="gender" name="gender">
           <option value="" disabled selected>Select Gender</option>          
           <option value="m">Male</option>
           <option value="f">Female</option>
@@ -66,6 +82,5 @@
   </div>
   <script src="../scripts/postFitTest.js"></script>
   <script src = "../scripts/logout.js"></script>
-
 </body>
 </html>

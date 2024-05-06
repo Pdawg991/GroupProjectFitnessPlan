@@ -24,8 +24,16 @@ h2 {
     color: #840202;
 }
 
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
 .navbar li {
-    float: none;
+    float: left;
 }
 
 .navbar li a {
@@ -40,19 +48,33 @@ h2 {
 .navbar li a:hover:not(.active) {
     background-color: #555;
 }
+/*
+.navbar li:last-child {
+    float: right;
+}
+
+.navbar li:last-child button.logout-button {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    padding: 15px 16px;
+    margin: 0;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.navbar li:last-child button.logout-button:hover {
+    background-color: #555;
+}
+*/
 
 .active {
     background-color: #ac0202;
 }
 
 
-.navbar ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
 
 .main {
     margin: 20px auto;
@@ -112,20 +134,6 @@ input[type=radio] {
 .heightDrop{
     height: 60px;
     width: 15%;
-}
-.logout-button{
-    border: none;
-    width: 150px;
-    margin-left: 760px;
-    background-color: #840202;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    font-size: 18px;
-    text-align: center;
 }
 
 input, textarea {

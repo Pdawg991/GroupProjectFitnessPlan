@@ -43,6 +43,8 @@ app.use('/register', require('./routes/api/register'));
 app.use(verifyJWT);
 
 app.use('/bio', require('./routes/api/bios'));
+app.use('/contact', require('./routes/api/contact'));
+app.use('/delete', require('./routes/api/delete'));
 
 
 app.all('*', (req, res) => {

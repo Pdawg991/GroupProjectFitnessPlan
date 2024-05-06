@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const payload = new FormData(document.getElementById('updateAccountInput'));
         console.log(...payload);
         const data = {
-            clientName: payload.get('clientNameInput'),
-            clientAge: payload.get('clientAgeInput')
+            clientName: payload.get('clientName'),
+            clientAge: payload.get('clientAge')
         };
+        console.log(data);
         await fetch('/bio/updateAccount', {
             method: 'PATCH',
             headers: {

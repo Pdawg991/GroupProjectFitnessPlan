@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async function(){
                 'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
             credentials: 'include',
-            body: JSON.stringify(data),
+            body: JSON.stringify(data)
         });
         const resData = await response.json();
         var tableBody = document.getElementById("dietTable");

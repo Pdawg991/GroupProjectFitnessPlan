@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', async function(){
             body: JSON.stringify(data),
         });
         const resData = await response.json();
-        console.log(resData);
         var tableBody = document.getElementById("workoutTable");
         tableBody.innerHTML = "<tr><th>Exercise</th><th>Reps/Duration</th><th>Rest Time</th></tr>";
         // Populate table with exercise data

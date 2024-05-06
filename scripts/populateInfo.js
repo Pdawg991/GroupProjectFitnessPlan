@@ -24,9 +24,8 @@ document.addEventListener('DOMContentLoaded', function(){
             },
             credentials: 'include',
         });
-
-
             const nameRes = await response2.json();
+        if(response.status === 200){
             var gender = resData.gender == 'm' ? "Male" : (resData.gender == 'f' ? "Female" : "");
             document.getElementById("clientNameOutput").textContent = nameRes.clientName;
             document.getElementById("curWeightOutput").textContent = resData.current_weight;
@@ -34,7 +33,11 @@ document.addEventListener('DOMContentLoaded', function(){
             document.getElementById("clientAgeOutput").textContent = nameRes.clientAge;
             document.getElementById("genderOutput").textContent = gender;
             document.getElementById("heightOutput").textContent = parseInt(resData.height-resData.height%12)/12 + "'" + resData.height%12 + "\"";
-    
+        }
+        else{
+            document.getElementById("clientNameOutput").textContent = nameRes.clientName;
+            document.getElementById("clientAgeOutput").textContent = nameRes.clientAge;
+        }
     };
     const sendRefreshToken = async () => {
         try {
