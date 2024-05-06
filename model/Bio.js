@@ -2,10 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const bioSchema = new Schema({
-    fitness_goal: {
-        type: String,
-        required: true
-    },
     current_weight: {
         type: Number,
         required: true
@@ -31,43 +27,33 @@ const bioSchema = new Schema({
         type: String,
         required: true
     },
+    exercises: {
+        type: Array,
+        required: false,
+        default: []
+    },
+    diet: {
+        type: Array,
+        required: false,
+        default: []
+    },
+    caloricIntake:{
+        type: Number,
+        required: false,
+        default: 0
+    },
+    notes:{
+        type: String,
+        required: false,
+        default: ""
+    },
     createdAt: { 
         type: Date, 
         default: Date.now 
     }
 });
 
-const personalInfoSchema = new Schema({
-    age: {
-        type: Number,
-        required: true
-    },
-    current_weight: {
-        type: Number,
-        required: true
-    },
-    current_height: {
-        type: Number,
-        required: true
-    },
-    gender: {
-        type: String,
-        enum: ['m', 'f'],
-        required: true
-    },
-    name: {
-        type: String,
-        required: true
-    },
-    goal_weight: {
-        type: Number,
-        required: true
-    },
-    level: {
-        type: Number,
-        required: true
-    }
-});
+
 const usernamePasswordSchema = new Schema({
     username: {
         type: String,
@@ -98,6 +84,5 @@ const usernamePasswordSchema = new Schema({
 
 const UsernamePassword = mongoose.model('UsernamePassword', usernamePasswordSchema);
 const Bio = mongoose.model('Bio', bioSchema);
-const PersonalInfo = mongoose.model('PersonalInfo', personalInfoSchema);
 
-module.exports = { Bio, PersonalInfo, UsernamePassword};
+module.exports = { Bio, UsernamePassword};

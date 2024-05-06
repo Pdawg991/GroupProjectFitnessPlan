@@ -24,17 +24,16 @@ document.addEventListener('DOMContentLoaded', function(){
             },
             credentials: 'include',
         });
+
+
             const nameRes = await response2.json();
-            var gender;
-            if(resData.gender == 'm') gender = "Male";
-            else gender = "Female";
+            var gender = resData.gender == 'm' ? "Male" : (resData.gender == 'f' ? "Female" : "");
             document.getElementById("clientNameOutput").textContent = nameRes.clientName;
-            document.getElementById("fitGoalOutput").textContent = resData.fitness_goal;
             document.getElementById("curWeightOutput").textContent = resData.current_weight;
             document.getElementById("goalWeightOutput").textContent = resData.goal_weight;
             document.getElementById("clientAgeOutput").textContent = nameRes.clientAge;
             document.getElementById("genderOutput").textContent = gender;
-            document.getElementById("heightOutput").textContent = resData.height;
+            document.getElementById("heightOutput").textContent = parseInt(resData.height-resData.height%12)/12 + "'" + resData.height%12 + "\"";
     
     };
     const sendRefreshToken = async () => {

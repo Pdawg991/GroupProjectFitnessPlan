@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="../scripts/healthAnalytics.js"></script>
   <title>Workout Plan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
@@ -14,23 +13,25 @@
         <div class="navbar">
             <nav>
                 <ul>
-                    <li><a href="fitnessTest.html">Your Fitness</a></li>
-                    <li><a class="active" href="workouts.html">Workout Plan</a></li>
-                    <li><a href="diets.html">Diet Plan</a></li>
-                    <li><a href="progress.html">Progress</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="information.html">Account</a></li>
-                    <li><button class="logout-button" id="logout">Log Out</button></li>
+                    <div>
+                        <li><a href="fitnessTest.html">Your Fitness</a></li>
+                        <li><a class="active" href="workouts.html">Workout Plan</a></li>
+                        <li><a href="diets.html">Diet Plan</a></li>
+                        <li><a href="progress.html">Progress</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="information.html">Account</a></li>
+                    </div>
+                    <div class="log-out" id = "logout">
+                      <li><a href="login.html">Log Out</a></li>
+                      </div>
                 </ul>
             </nav>
         </div>
 
         <section class="main">
             <h2>Workout Plan</h2>
-            <div class = "description">
-                Below is your given workout. To maximize results, do this at least three times a week, follow your diet plan, and get adequate rest.
-            </div>
-            <br><br>
+            <div class = "description" id="WorkoutNotes"></div>
+
             <section class="table-container">
                 <table id="workoutTable">
                     <tr>
@@ -48,5 +49,8 @@
               </section>
         </section>
     </div>
+  <script src="../scripts/getWorkouts.js"></script>
+  <script src="../scripts/logout.js"></script>
+
 </body>
 </html>

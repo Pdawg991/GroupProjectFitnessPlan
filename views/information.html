@@ -6,10 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="../scripts/populateInfo.js"></script>
-  <script src="../scripts/deleteAccount.js"></script>
-  <script src = "../scripts/updateAccount.js"></script>
-  <script src = "../scripts/logout.js"></script>
+
 </head>
 <body>
   <div class="wrapper">
@@ -17,20 +14,22 @@
     <div class="navbar">
         <nav>
             <ul>
-                <li><a href="fitnessTest.html">Your Fitness</a></li>
-                <li><a href="workouts.html">Workout Plan</a></li>
-                <li><a href="diets.html">Diet Plan</a></li>
-                <li><a href="progress.html">Progress</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a class="active" href="information.html">Account</a></li>
-                <li><button class="logout-button" id="logout">Log Out</button></li>
+                <div>
+                    <li><a href="fitnessTest.html">Your Fitness</a></li>
+                    <li><a href="workouts.html">Workout Plan</a></li>
+                    <li><a href="diets.html">Diet Plan</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="active" href="information.html">Account</a></li>
+                </div>
+                <div class="log-out" id = "logout">
+                  <li><a href="login.html">Log Out</a></li>
+                  </div>
             </ul>
         </nav>
     </div>
 
     <section class="main">
-      <!-- Added to navbar
-        <input class="button logout-button" id="logout" value="Log Out"> -->
       <h2>Personal Info</h2>
       <hr>
       <section class="table-container">
@@ -38,53 +37,34 @@
           <tr>
             <td>Name:</td>
             <td id="clientNameOutput">
-              <script type="text">
-                document.write(displayName) 
-              </script>
             </td>
           </tr>
           <tr>
             <td>Age:</td>
             <td id="clientAgeOutput">
-              <script type="text">
-                document.write(age) 
-              </script> 
             </td>
           </tr>
           <tr>
             <td>Current weight:</td>
             <td id="curWeightOutput">
-              <script type="text">
-                document.write(weight) 
-              </script>
             </td>
           </tr>
           <tr>
             <td>Goal weight:</td>
             <td id="goalWeightOutput">
-              <script type="text">
-                document.write(goal_weight) 
-              </script>
             </td>
           </tr>
           <tr>
             <td>Height:</td>
             <td id="heightOutput">
-
             </td>
           </tr>
           <tr>
             <td>Gender:</td>
             <td id="genderOutput">
+            </td>
+          </tr>
 
-            </td>
-          </tr>
-          <tr>
-            <td>Fitness goal:</td>
-            <td id="fitGoalOutput">
-              
-            </td>
-          </tr>
         </table>
       </section>      
       <form id="changeAccount">
@@ -101,20 +81,22 @@
         Update Account Inforation
       </h2>
       <p>
-        <form id = "updateAccount">
+      <form id = "updateAccountInput">
           <input type="text" id="clientNameInput" name="clientName" placeholder = "Name" required><i class="validation"><span></span><span></span></i>
         <br>    
-          <input type="text" id="clientAgeInput" name="clientAge" placeholder = "Age" required><i class="validation"><span></span><span></span></i>     
+          <input type="text" id="clientAgeInput" name="clientAge" placeholder = "Age" required><i class="validation"><span></span><span></span></i>   
+      </form>
       </p>
       <div class="row">
         <div class="column popup_col">
-            <input type="button" id="updateAcc" value="Update Account">
-          </form>
+            <input type="button" id="updateAccButton" value="Update">
         </div>
         <div class="column popup_col">
           <form id = "deleteAccount"> <!--Have this open another popup to confirm-->
             <input type="button" id="delete" value="Delete Account">
           </form>
+
+
         </div>
       </div>
         <a
@@ -128,5 +110,10 @@
                 text-decoration: none;
             ">&times;</a>
     </div>
+    <script src="../scripts/populateInfo.js"></script>
+    <script src="../scripts/deleteAccount.js"></script>
+    <script src = "../scripts/updateAccount.js"></script>
+    <script src="../scripts/logout.js"></script>
+
 </body>
 </html>

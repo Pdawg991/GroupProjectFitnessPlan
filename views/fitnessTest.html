@@ -24,13 +24,14 @@
     </div>
     
     <section class="main">
+      <input class="button logout-button" id="logout" value="Log Out">
+      <form id="fitnessTestForm">
         <label for="gender">What is your gender?</label><br>
-        <select class = "dropdown" id="gender" name="gender">
+        <select class = "dropdown" class = "dropdown" id="gender" name="gender">
           <option value="" disabled selected>Select Gender</option>          
           <option value="m">Male</option>
           <option value="f">Female</option>
         </select><br><br>
-
         <label for="curWeight">What is your current weight in lbs?</label><br>
         <input type="text" id="curWeight" name="curWeight" placeholder="Your weight..."><br><br>
         
@@ -65,9 +66,36 @@
           <option value="10">10</option>
           <option value="11">11</option>
         </select><br><br>
+        <select class = "heightDrop" id="heightFt" name="heightFt">
+          <option value="" disabled selected>Select ft</option>  <!--All values are the ft value in inches-->         
+          <option value="12">1</option>
+          <option value="24">2</option>
+          <option value="36">3</option>
+          <option value="48">4</option>
+          <option value="60">5</option>
+          <option value="72">6</option>
+          <option value="84">7</option>
+          <option value="96">8</option>
+        </select>
+
+        <select class = "heightDrop" id="heightIn" name="heightIn">
+          <option value="" disabled selected>Select In</option>          
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+        </select><br><br>
 
         <label for="fitnessLevel">What is your current fitness level (1 being beginner and 5 being master)?</label><br>
-        <div class="checkboxes center">
+        <div class="checkboxes center center">
           <label for="level1"><input type="radio" name="fitnessLevel" id="level1" value="1"> 1</label>
           <label for="level2"><input type="radio" name="fitnessLevel" id="level2" value="2"> 2</label>
           <label for="level3"><input type="radio" name="fitnessLevel" id="level3" value="3"> 3</label>

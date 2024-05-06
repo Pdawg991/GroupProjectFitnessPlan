@@ -4,31 +4,37 @@ const path = require('path');
 const app = express();
 
 
+
+function checkReferer(req, res, next) {
+    const authorizedReferers = ['fitnessTest.html', 'information.html', 'login.html', 'register.html', 'workouts.html', 'diets.html', 'contact.html'];
+    if (req.headers.referer && authorizedReferers.some(referer => req.headers.referer.includes(referer))) {
+        next();
+    } else {
+        // If requested from an unauthorized source, return 403 Forbidden
+        res.status(403).send('Forbidden');
+    }
+}
+
 router.get('^/$|/fitnessTest(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'fitnessTest.html'));
 });
 router.get('^/$|/fitTest(.css)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'fitTest.css'));
 });
-router.get('^/$|/postFitTest(.js)?', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('fitnessTest.html')) {
+router.get('^/$|/postFitTest(.js)?', checkReferer, (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'postFitTest.js'));
-    } else {
-        // If requested directly or from an unauthorized source, return 403 Forbidden
-        res.status(403).send('Forbidden');
-    }
-});
-router.get('^/$|/logout.js', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('fitnessTest.html')) 
-        res.sendFile(path.join(__dirname, '..', 'scripts', 'logout.js'));
-    else if(req.headers.referer && req.headers.referer.includes('information.html'))
-        res.sendFile(path.join(__dirname, '..', 'scripts', 'logout.js'));
-    else {
-        // If requested directly or from an unauthorized source, return 403 Forbidden
-        res.status(403).send('Forbidden');
-    }
 });
 
+router.get('^/$|/logout.js', checkReferer, (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'scripts', 'logout.js'));
+});
+
+router.get('^/$|/getWorkouts.js',checkReferer, (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'scripts', 'getWorkouts.js'));
+});
+router.get('^/$|/getDiet.js',checkReferer, (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'scripts', 'getDiet.js'));
+});
 router.get('^/$|/information(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'information.html'));
 });
@@ -37,9 +43,6 @@ router.get('^/$|/workouts(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'workouts.html'));
 });
 
-router.get('^/$|/workouts(.html)?', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'workouts.html'));
-});
 router.get('^/$|/diets(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'diets.html'));
 });
@@ -54,13 +57,8 @@ router.get('^/$|/login(.html)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'login.html'));
 });
 
-router.get('^/$|/login(.js)?', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('login.html')) {
+router.get('^/$|/login(.js)?', checkReferer, (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'login.js'));
-    } else {
-        // If requested directly or from an unauthorized source, return 403 Forbidden
-        res.status(403).send('Forbidden');
-    }
 });
 
 router.get('^/$|/register(.html)?', (req, res) => {
@@ -69,57 +67,32 @@ router.get('^/$|/register(.html)?', (req, res) => {
 router.get('^/$|/register(.css)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'register.css'));
 });
-router.get('^/$|/registerUser(.js)?', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('register.html')) {
+router.get('^/$|/registerUser(.js)?',checkReferer, (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'registerUser.js'));
-    } else {
-        // If requested directly or from an unauthorized source, return 403 Forbidden
-        res.status(403).send('Forbidden');
-    }
 });
 
-router.get('^/$|/info(.js)?', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('information.html')) {
+router.get('^/$|/info(.js)?', checkReferer, (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'info.js'));
-    } else {
-        // If requested directly or from an unauthorized source, return 403 Forbidden
-        res.status(403).send('Forbidden');
-    }
 });
 
-router.get('^/$|/healthAnalytics(.js)?', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('workouts.html')) {
+router.get('^/$|/healthAnalytics(.js)?', checkReferer, (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'healthAnalytics.js'));
-    } else {
-        // If requested directly or from an unauthorized source, return 403 Forbidden
-        res.status(403).send('Forbidden');
-    }
 });
-router.get('^/$|/updateAccount(.js)?', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('information.html')) {
+
+router.get('^/$|/updateAccount(.js)?',checkReferer, (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'updateAccount.js'));
-    } else {
-        // If requested directly or from an unauthorized source, return 403 Forbidden
-        res.status(403).send('Forbidden');
-    }
 });
-router.get('^/$|/populateInfo(.js)?', (req, res) => {
-     if (req.headers.referer && req.headers.referer.includes('information.html')) {
+
+router.get('^/$|/populateInfo(.js)?', checkReferer, (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'scripts', 'populateInfo.js'));
-    } else {
-        // If requested directly or from an unauthorized source, return 403 Forbidden
-        res.status(403).send('Forbidden');
-    }
 });
-router.get('^/$|/deleteAccount(.js)?', (req, res) => {
-    if (req.headers.referer && req.headers.referer.includes('information.html')) {
+
+router.get('^/$|/deleteAccount(.js)?',checkReferer, (req, res) => {
        res.sendFile(path.join(__dirname, '..', 'scripts', 'deleteAccount.js'));
-   } else {
-       // If requested directly or from an unauthorized source, return 403 Forbidden
-       res.status(403).send('Forbidden');
-   }
 });
+
 router.get('^/$|/main(.css)?', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'views', 'main.css'));
 });
+
 module.exports = router;

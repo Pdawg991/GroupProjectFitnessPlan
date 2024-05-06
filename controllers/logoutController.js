@@ -1,6 +1,6 @@
 const { UsernamePassword } = require('../model/Bio');
 
-const handleLogout = async (req, res)=> {
+const handleLogout = async (req, res) => {
     //On client, delete accessToken
     const cookies = req.cookies;
     if(!cookies?.jwt) return res.sendStatus(204); //No Content

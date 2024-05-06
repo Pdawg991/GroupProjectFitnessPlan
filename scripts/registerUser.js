@@ -19,7 +19,6 @@ fetch('/register', {
     },
     body: JSON.stringify(data),
 })
-.then(res => res.json(data))
 .then(window.location.href = 'login.html')
 .catch(err => console.log(err));
   });

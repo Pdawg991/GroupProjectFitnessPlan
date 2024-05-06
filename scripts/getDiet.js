@@ -30,19 +30,18 @@ document.addEventListener('DOMContentLoaded', async function(){
             body: JSON.stringify(data),
         });
         const resData = await response.json();
-        console.log(resData);
-        var tableBody = document.getElementById("workoutTable");
-        tableBody.innerHTML = "<tr><th>Exercise</th><th>Reps/Duration</th><th>Rest Time</th></tr>";
-        // Populate table with exercise data
-        resData.exercises.forEach(exercise => {
-            var row = `<tr><td>${exercise[0]}</td><td>${exercise[1]}</td><td>${exercise[2]}</td></tr>`;
-            tableBody.innerHTML += row;
+        var tableBody = document.getElementById("dietTable");
+        tableBody.innerHTML = "<tr><th>Protein</th><th>Fat</th><th>Carbs</th><th> Water</th><th>Fiber</th></tr>";
+        
+        // Populate table with data table
+        var row = "<tr>";
+        resData.diet.forEach(value => {
+            row += `<td>${value}</td>`;
         });
-
-        document.getElementById('WorkoutNotes').textContent = "Repeat exercises for 2 more rounds. Rest for 1 minute (60 seconds) in between each round";
-
+        row += "</tr>";
+        tableBody.innerHTML += row;
+        document.getElementById("totalCalories").textContent = resData.caloricIntake;
     };
-    getData();
     
- 
+    getData();
 });
